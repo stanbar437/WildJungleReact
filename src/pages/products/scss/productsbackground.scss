@@ -1,0 +1,191 @@
+.totalbackground {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+}
+.totalbackground .backgroundimg1 {
+  position: fixed;
+  width: 30%;
+  height: 50%;
+  background-image: url(../imgs/lift1.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  right: 0;
+  top: 70%;
+  animation: leaf1 10s linear infinite;
+  transform-origin: top right;
+}
+
+.totalbackground .backgroundimg2 {
+  position: fixed;
+  width: 40%;
+  height: 50%;
+  background-image: url(../imgs/lift2.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  right: 0;
+  top: 10%;
+  animation: leaf2 15s linear 0s infinite;
+  transform-origin: top right;
+}
+
+.totalbackground .backgroundimg3 {
+  position: fixed;
+  width: 25%;
+  height: 35%;
+  background-image: url(../imgs/lift3.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  right: 50%;
+  top: 0;
+  animation: leaf3 15s linear 0s infinite;
+  transform-origin: top;
+}
+
+.totalbackground .backgroundimg4 {
+  position: fixed;
+  width: 20%;
+  height: 40%;
+  background-image: url(../imgs/lift4.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  left: 0;
+  top: 10%;
+  animation: leaf4 12s linear 0s infinite;
+  transform-origin: top left;
+}
+
+.totalbackground .backgroundimg5 {
+  position: fixed;
+  width: 45%;
+  height: 50%;
+  background-image: url(../imgs/lift5.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  left: 0;
+  bottom: 0;
+  animation: leaf5 15s linear 0s infinite;
+  transform-origin: top left;
+}
+
+.totalbackground .backgroundimg6 {
+  opacity: 0.1;
+  position: fixed;
+  width: 45%;
+  height: 50%;
+  background-image: url(../imgs/bird.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  left: 30%;
+  bottom: 8%;
+  animation: bird 10s linear 0s infinite;
+  transform-origin: center center;
+}
+
+@keyframes leaf1 {
+  0% {
+    transform: rotate(15deg);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(20deg);
+  }
+}
+
+@keyframes leaf2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes leaf3 {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes leaf4 {
+  0% {
+    transform: rotate(30deg);
+  }
+  25% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(30deg);
+  }
+}
+
+@keyframes leaf5 {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(7deg);
+  }
+  50% {
+    transform: rotate(22deg);
+  }
+  75% {
+    transform: rotate(7deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+// @keyframes bird {
+//   0% {
+//     transform: rotate(0deg);
+//   }
+//   25% {
+//     transform: rotate(7deg);
+//   }
+//   50% {
+//     transform: rotate(10deg);
+//   }
+//   75% {
+//     transform: rotate(7deg);
+//   }
+//   100% {
+//     transform: rotate(0deg);
+//   }
+// }

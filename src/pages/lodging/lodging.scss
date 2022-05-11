@@ -1,0 +1,2171 @@
+$ning-color1: #eb5c37;
+$ning-color2: #f9b112;
+$ning-color3: #ffffff;
+$ning-color4: #000000;
+$ning-color5: #1b7754;
+$ning-chinesefont: "Noto Sans", sans-serif;
+$ning-englishont: "Playfair Display", serif;
+
+@mixin mobile {
+  @media screen and (max-width: 375px) {
+    @content;
+  }
+}
+
+/* loding_title */
+
+@media screen and (min-width: 376px) {
+  .loding_titlebox {
+    width: 100%;
+    height: 35vw;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+
+  .loding_title {
+    width: 100%;
+    text-align: center;
+
+    h2 {
+      font-family: $ning-englishont;
+      font-size: 5rem;
+      font-weight: 600;
+      margin-top: 3%;
+    }
+
+    p {
+      width: 50%;
+      font-family: $ning-chinesefont;
+      font-size: 1.2rem;
+      color: $ning-color4;
+      word-wrap: normal;
+      white-space: pre-wrap;
+      line-height: 2.5rem;
+    }
+  }
+
+  .loding_titlep {
+    margin-top: 3%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .lodging_ocean {
+    width: 100%;
+    height: 35vw;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .lodging_oceanimg {
+    width: 70%;
+    object-fit: cover;
+    position: absolute;
+  }
+  .lodging_oceanimgwrap {
+    left: 7%;
+    bottom: 5%;
+    position: absolute;
+    display: flex;
+  }
+
+  .lodging_oceanimg1 {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    box-shadow: 0 0 2 #0000007b;
+    border: 2px solid $ning-color3;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+
+  .lodging_oceanimg1 img {
+    height: 100px;
+    object-fit: cover;
+  }
+
+  .lodging_oceanimg2 {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    box-shadow: 0 0 2 #0000007b;
+    border: 2px solid $ning-color3;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+
+  .lodging_oceanimg2 img {
+    height: 100px;
+    object-fit: cover;
+  }
+
+  .lodging_oceanimg3 {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    box-shadow: 0 0 10px #0000007b;
+    border: 2px solid $ning-color3;
+    cursor: pointer;
+  }
+
+  .lodging_oceanimg3 img {
+    height: 100px;
+    object-fit: cover;
+  }
+
+  .lodging_oceanname {
+    font-size: 5rem;
+    font-family: $ning-englishont;
+    color: $ning-color3;
+    font-weight: 500;
+    position: absolute;
+    right: 0;
+    bottom: 5%;
+  }
+
+  .lodging_oceanbox {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    background: linear-gradient(to right, #ffffff00 0%, $ning-color3 30%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .lodging_oceanprice,
+  .lodging_nocturnalprice {
+    margin-top: 4%;
+    display: flex;
+    align-items: flex-end;
+    p {
+      width: 100%;
+      font-family: $ning-chinesefont;
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: $ning-color4;
+      margin: 2% 0;
+    }
+    h3 {
+      font-size: 2.5rem;
+      font-family: $ning-chinesefont;
+      color: $ning-color4;
+      margin-bottom: 0;
+      margin-left: 2%;
+      span {
+        font-size: 1.4rem;
+        font-family: $ning-chinesefont;
+        color: $ning-color4;
+      }
+    }
+  }
+
+  .lodging_oceanwrap {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: end;
+
+    h4 {
+      font-family: $ning-englishont;
+      font-size: 2rem;
+      color: $ning-color4;
+    }
+
+    h1 {
+      font-family: $ning-chinesefont;
+      font-size: 2.8rem;
+      font-weight: 400;
+      color: $ning-color4;
+      margin-top: 3%;
+    }
+  }
+
+  .lodging_oceanamount {
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+
+  .lodging_oceanminus,
+  .lodging_oceanplus {
+    width: 50px;
+    height: 50px;
+    background-color: $ning-color4;
+    color: $ning-color3;
+    border-radius: 0;
+  }
+
+  .lodging_oceanvalue {
+    width: 60px;
+    height: 50px;
+    border-radius: 0;
+    border: 1px solid $ning-color4;
+    font-size: 18px;
+    font-family: $ning-chinesefont;
+    text-align: center;
+    line-height: 18px;
+    outline: 0;
+  }
+
+  .lodging_oceanvalue:focus {
+    border-color: $ning-color2;
+    box-shadow: 0 0 0 #ffffff00;
+  }
+
+  .yearAndMonth {
+    font-family: $ning-chinesefont;
+    font-size: 1.8rem;
+    margin: 20px 0 5px 0;
+
+    span {
+      font-size: 1.2rem;
+      color: #777;
+    }
+  }
+
+  .ning_checkbox {
+    display: flex;
+    width: 100%;
+  }
+
+  .ning_datebox {
+    width: 100%;
+    font-family: $ning-chinesefont;
+  
+  }
+
+  .ning_lastdatebox {
+    width: 100%;
+    font-family: $ning-chinesefont;
+  
+  }
+
+  .ning_table {
+    width: 100%;
+    height: 180px;
+    border: 1px solid $ning-color4;
+    text-align: center;
+
+    .ning_tr {
+      background-color: $ning-color2;
+      border: 1px solid $ning-color4;
+      th {
+        padding: 5px 0;
+        color: $ning-color3;
+      }
+    }
+  }
+
+  .ning_tbody td:hover {
+    outline: 1px solid $ning-color2;
+    cursor:pointer;
+  }
+
+  .lodging_oceandetailbtn,
+  .oceanreservation {
+    width: 60%;
+    height: 50px;
+    background-color: $ning-color4;
+    color: $ning-color3;
+    margin-top: 5%;
+    border-radius: 0;
+    font-family: $ning-chinesefont;
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+
+  .lodging_oceanline {
+    width: 15%;
+    height: 1px;
+    background-color: $ning-color4;
+    margin: 15% 0 2% 85%;
+  }
+
+  .lodging_oceanlist1,
+  .lodging_oceanlist2,
+  .lodging_oceanlist3 {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    text-align: left;
+    p {
+      font-family: $ning-chinesefont;
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: $ning-color4;
+      margin:6% 0;
+    }
+    
+  }
+
+  
+
+  .ocean_introducebox {
+    width: 35%;
+    h2 {
+      font-family: $ning-chinesefont;
+      font-size: 2.5rem;
+      margin-top: 15%;
+    }
+
+    h2:nth-child(1) {
+      margin-top: 0%;
+    }
+  }
+
+  .lodging_oceanincheck:focus,
+  .lodging_oceanoutcheck:focus {
+    border-color: $ning-color2;
+    box-shadow: 0 0 0 #ffffff00;
+  }
+
+  .lodging_oceanincheck,
+  .lodging_oceanoutcheck {
+    margin-left: 40%;
+    width: 60%;
+    height: 50px;
+    color: $ning-color4;
+    border: 1px solid $ning-color4;
+    margin-top: 5%;
+    border-radius: 0;
+    font-family: $ning-chinesefont;
+    font-size: 1.2rem;
+    display: block;
+  }
+
+  .lodging_oceanboxdetail {
+    height: 0;
+    overflow: hidden;
+    transition: 1.5s;
+  }
+
+  .lodging_oceandetail {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 6%;
+  }
+
+  .ocean_introduce {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    .ocean_score {
+      width: 50px;
+      height: 50px;
+      background-color: $ning-color2;
+      border-radius: 6px 6px 6px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 40px;
+    }
+
+    .ocean_score p {
+      font-family: $ning-chinesefont;
+      font-size: 2rem;
+      color: $ning-color3;
+      margin: 0;
+    }
+
+    p {
+      font-family: $ning-chinesefont;
+      font-size: 1.6rem;
+      color: #777;
+      margin: 0;
+      margin-left: 10px;
+    }
+
+    p:hover {
+      color: $ning-color4;  
+    }
+  }
+
+  .ocean_introducetext {
+    width: 100%;
+    font-family: $ning-chinesefont;
+    font-size: 1.4rem;
+    color: $ning-color4;
+    word-wrap: normal;
+    white-space: pre-wrap;
+    margin-top: 5%;
+    line-height: 160%;
+  }
+
+  .ocean_equipment {
+    width: 100%;
+    display: flex;
+    margin-bottom: 15%;
+  }
+
+  .ocean_bath,
+  .ocean_other {
+    width: 50%;
+  }
+
+  .ocean_bathtitle,
+  .ocean_othertitle {
+    font-family: $ning-chinesefont;
+    font-size: 1.6rem;
+    color: $ning-color2;
+    border-left: 10px solid $ning-color2;
+    padding: 0 3%;
+    line-height: 1.6rem;
+    margin-top: 15%;
+  }
+
+  .ocean_bathtext,
+  .ocean_othertext {
+    font-family: $ning-chinesefont;
+    font-size: 1.4rem;
+    margin-top: 8%;
+    line-height: 2.8rem;
+  }
+
+  .ocean_introduceicon {
+    width: 60%;
+    height: 50%;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    figure {
+      width: 14%;
+      border-left: 1px solid #777;
+      padding: 2% 2%;
+      margin: 2% 0;
+      font-family: $ning-chinesefont;
+    }
+
+    figure:nth-child(7),
+    figure:nth-child(14) {
+      border-right: 1px solid #777;
+    }
+
+    img {
+      width: 80%;
+    }
+
+    fieldset {
+      margin-top: 20%;
+      font-size: 1.2rem;
+    }
+  }
+
+  // ocean hover
+
+  .lodging_ocean:hover {
+    img {
+      -webkit-filter: contrast(120%); /* Safari */
+      filter: contrast(120%);
+    }
+
+    .lodging_oceanname {
+      transition-duration: 0.8s;
+      right: 40%;
+    }
+  }
+  .lodging_ocean button:hover {
+    background-color: $ning-color2;
+  }
+
+  // ice
+
+  .lodging_ice {
+    width: 100%;
+    height: 35vw;
+    overflow: hidden;
+    position: relative;
+    margin-top: 1%;
+  }
+
+  .lodging_iceimg {
+    width: 70%;
+    right: 0;
+    object-fit: cover;
+    position: absolute;
+  }
+
+  .lodging_iceimgwrap {
+    right: 7%;
+    bottom: 5%;
+    position: absolute;
+    display: flex;
+  }
+
+  .lodging_iceimg1 {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    box-shadow: 0 0 2 #0000007b;
+    border: 2px solid $ning-color3;
+    cursor: pointer;
+  }
+
+  .lodging_iceimg1 img {
+    height: 100px;
+    object-fit: cover;
+  }
+
+  .lodging_iceimg2 {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    box-shadow: 0 0 2 #0000007b;
+    border: 2px solid $ning-color3;
+    cursor: pointer;
+    margin-left: 20px;
+  }
+
+  .lodging_iceimg2 img {
+    height: 100px;
+    object-fit: cover;
+  }
+
+  .lodging_iceimg3 {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    box-shadow: 0 0 10px #0000007b;
+    border: 2px solid $ning-color3;
+    cursor: pointer;
+    margin-left: 20px;
+  }
+
+  .lodging_iceimg3 img {
+    height: 100px;
+    object-fit: cover;
+  }
+
+  .lodging_icename {
+    font-size: 5rem;
+    font-family: $ning-englishont;
+    color: $ning-color3;
+    font-weight: 500;
+    position: absolute;
+    left: 0;
+    bottom: 5%;
+  }
+
+  .lodging_icebox {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(to right, $ning-color3 70%, #ffffff00 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .lodging_iceprice,
+  .lodging_tropicalprice {
+    margin-top: 4%;
+    display: flex;
+    align-items: flex-end;
+
+    p {
+      font-family: $ning-chinesefont;
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: $ning-color4;
+      margin: 2% 0;
+    }
+
+    h3 {
+      font-size: 2.5rem;
+      font-family: $ning-chinesefont;
+      color: $ning-color4;
+      margin-left: 2%;
+      span {
+        font-size: 1.4rem;
+        font-family: $ning-chinesefont;
+        color: $ning-color4;
+      }
+    }
+  }
+
+  .lodging_icewrap {
+    width: 60%;
+
+    h4 {
+      font-family: $ning-englishont;
+      font-size: 2rem;
+      color: $ning-color4;
+    }
+
+    h1 {
+      font-family: $ning-chinesefont;
+      font-size: 2.8rem;
+      font-weight: 400;
+      color: $ning-color4;
+      margin-top: 3%;
+    }
+  }
+
+  .lodging_iceamount {
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+  }
+
+  .lodging_iceminus,
+  .lodging_iceplus {
+    width: 50px;
+    height: 50px;
+    background-color: $ning-color4;
+    color: $ning-color3;
+    border-radius: 0;
+  }
+
+  .lodging_icevalue {
+    width: 60px;
+    height: 50px;
+    border-radius: 0;
+    border: 1px solid $ning-color4;
+    font-size: 18px;
+    font-family: $ning-chinesefont;
+    text-align: center;
+    line-height: 18px;
+    outline: 0;
+  }
+
+  .lodging_icevalue:focus {
+    border-color: $ning-color2;
+    box-shadow: 0 0 0 #ffffff00;
+  }
+
+  .lodging_icedetailbtn,
+  .icereservation {
+    width: 60%;
+    height: 50px;
+    background-color: $ning-color4;
+    color: $ning-color3;
+    margin-top: 5%;
+    border-radius: 0;
+    font-family: $ning-chinesefont;
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+
+  .lodging_iceline {
+    width: 15%;
+    height: 1px;
+    background-color: $ning-color4;
+    margin: 15% 0 2% 0%;
+  }
+
+  .lodging_icelist1,
+  .lodging_icelist2,
+  .lodging_icelist3 {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    p {
+      font-family: $ning-chinesefont;
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: $ning-color4;
+      margin: 6% 0;
+    }
+  }
+
+ 
+
+  .ice_introducebox {
+    width: 35%;
+    h2 {
+      font-family: $ning-chinesefont;
+      font-size: 2.5rem;
+      margin-top: 15%;
+    }
+
+    h2:nth-child(1) {
+      margin-top: 0%;
+    }
+  }
+
+  .lodging_iceincheck:focus,
+  .lodging_iceoutcheck:focus {
+    border-color: $ning-color2;
+    box-shadow: 0 0 0 #ffffff00;
+  }
+
+  .lodging_iceincheck,
+  .lodging_iceoutcheck {
+    width: 60%;
+    height: 50px;
+    color: $ning-color4;
+    border: 1px solid $ning-color4;
+    outline: 0;
+    margin-top: 5%;
+    border-radius: 0;
+    font-family: $ning-chinesefont;
+    font-size: 1.2rem;
+    font-weight: 400;
+    display: block;
+  }
+
+  .lodging_iceboxdetail {
+    height: 0;
+    overflow: hidden;
+    transition: 1.5s;
+  }
+
+  .lodging_icedetail {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 6%;
+  }
+
+  .ice_introduce {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    .ice_score {
+      width: 50px;
+      height: 50px;
+      background-color: $ning-color2;
+      border-radius: 6px 6px 6px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 40px;
+    }
+
+    .ice_score p {
+      font-family: $ning-chinesefont;
+      font-size: 2rem;
+      color: $ning-color3;
+      margin: 0;
+    }
+
+    p {
+      font-family: $ning-chinesefont;
+      font-size: 1.6rem;
+      color: #777;
+      margin: 0;
+      margin-left: 10px;
+    }
+
+    p:hover {
+      color: $ning-color4;  
+    }
+  }
+
+  .ice_introducetext {
+    width: 100%;
+    font-family: $ning-chinesefont;
+    font-size: 1.4rem;
+    color: $ning-color4;
+    word-wrap: normal;
+    white-space: pre-wrap;
+    margin-top: 5%;
+    line-height: 160%;
+  }
+
+  .ice_equipment {
+    width: 100%;
+    display: flex;
+    margin-bottom: 15%;
+  }
+
+  .ice_bath,
+  .ice_other {
+    width: 50%;
+  }
+
+  .ice_bathtitle,
+  .ice_othertitle {
+    font-family: $ning-chinesefont;
+    font-size: 1.6rem;
+    color: $ning-color2;
+    border-left: 10px solid $ning-color2;
+    padding: 0 3%;
+    line-height: 1.6rem;
+    margin-top: 15%;
+  }
+
+  .ice_bathtext,
+  .ice_othertext {
+    font-family: $ning-chinesefont;
+    font-size: 1.4rem;
+    margin-top: 8%;
+    line-height: 2.8rem;
+  }
+
+  .ice_introduceicon {
+    width: 60%;
+    height: 50%;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    figure {
+      width: 14%;
+      border-left: 1px solid #777;
+      padding: 2% 2%;
+      margin: 2% 0;
+      font-family: $ning-chinesefont;
+    }
+
+    figure:nth-child(7),
+    figure:nth-child(14) {
+      border-right: 1px solid #777;
+    }
+
+    img {
+      width: 80%;
+    }
+
+    fieldset {
+      margin-top: 20%;
+      font-size: 1.2rem;
+    }
+  }
+
+  /* ice hover */
+
+  .lodging_ice:hover {
+    img {
+      -webkit-filter: contrast(120%); /* Safari */
+      filter: contrast(120%);
+    }
+
+    .lodging_icename {
+      transition-duration: 0.8s;
+      left: 40%;
+    }
+  }
+  .lodging_ice button:hover {
+    background-color: $ning-color2;
+  }
+
+  //nocturnal
+
+  .lodging_nocturnal {
+    width: 100%;
+    height: 35vw;
+    overflow: hidden;
+    position: relative;
+    margin-top: 1%;
+  }
+
+  .lodging_nocturnalimg {
+    width: 70%;
+    object-fit: cover;
+    position: absolute;
+  }
+  .lodging_nocturnalimgwrap {
+    left: 7%;
+    bottom: 5%;
+    position: absolute;
+    display: flex;
+  }
+
+  .lodging_nocturnalimg1 {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    box-shadow: 0 0 2 #0000007b;
+    border: 2px solid $ning-color3;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+
+  .lodging_nocturnalimg1 img {
+    height: 100px;
+    object-fit: cover;
+  }
+
+  .lodging_nocturnalimg2 {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    box-shadow: 0 0 2 #0000007b;
+    border: 2px solid $ning-color3;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+
+  .lodging_nocturnalimg2 img {
+    height: 100px;
+    object-fit: cover;
+  }
+
+  .lodging_nocturnalimg3 {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    box-shadow: 0 0 10px #0000007b;
+    border: 2px solid $ning-color3;
+    cursor: pointer;
+  }
+
+  .lodging_nocturnalimg3 img {
+    height: 100px;
+    object-fit: cover;
+  }
+
+  .lodging_nocturnalname {
+    font-size: 5rem;
+    font-family: $ning-englishont;
+    color: $ning-color3;
+    font-weight: 500;
+    position: absolute;
+    right: 0;
+    bottom: 5%;
+  }
+
+  .lodging_nocturnalbox {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    background: linear-gradient(to right, #ffffff00 0%, $ning-color3 30%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .lodging_nocturnalwrap {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: end;
+
+    h4 {
+      font-family: $ning-englishont;
+      font-size: 2rem;
+      color: $ning-color4;
+    }
+
+    h1 {
+      font-family: $ning-chinesefont;
+      font-size: 2.8rem;
+      font-weight: 400;
+      color: $ning-color4;
+      margin-top: 3%;
+    }
+  }
+
+  .lodging_nocturnalamount {
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+
+  .lodging_nocturnalminus,
+  .lodging_nocturnalplus {
+    width: 50px;
+    height: 50px;
+    background-color: $ning-color4;
+    color: $ning-color3;
+    border-radius: 0;
+  }
+
+  .lodging_nocturnalvalue {
+    width: 60px;
+    height: 50px;
+    border-radius: 0;
+    border: 1px solid $ning-color4;
+    font-size: 18px;
+    font-family: $ning-chinesefont;
+    text-align: center;
+    line-height: 18px;
+    outline: 0;
+  }
+
+  .lodging_nocturnalvalue:focus {
+    border-color: $ning-color2;
+    box-shadow: 0 0 0 #ffffff00;
+  }
+
+  .lodging_nocturnaldetailbtn,
+  .nocturnalreservation {
+    width: 60%;
+    height: 50px;
+    background-color: $ning-color4;
+    color: $ning-color3;
+    margin-top: 5%;
+    border-radius: 0;
+    font-family: $ning-chinesefont;
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+
+  .lodging_nocturnalline {
+    width: 15%;
+    height: 1px;
+    background-color: $ning-color4;
+    margin: 15% 0 2% 85%;
+  }
+
+  .lodging_nocturnallist1,
+  .lodging_nocturnallist2,
+  .lodging_nocturnallist3 {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    text-align: left;
+    p {
+      font-family: $ning-chinesefont;
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: $ning-color4;
+      margin:6% 0;
+    }
+    
+  }
+
+
+  .nocturnal_introducebox {
+    width: 35%;
+    h2 {
+      font-family: $ning-chinesefont;
+      font-size: 2.5rem;
+      margin-top: 15%;
+    }
+
+    h2:nth-child(1) {
+      margin-top: 0%;
+    }
+  }
+
+  .lodging_nocturnalincheck:focus,
+  .lodging_nocturnaloutcheck:focus {
+    border-color: $ning-color2;
+    box-shadow: 0 0 0 #ffffff00;
+  }
+
+  .lodging_nocturnalincheck,
+  .lodging_nocturnaloutcheck {
+    margin-left: 40%;
+    width: 60%;
+    height: 50px;
+    color: $ning-color4;
+    border: 1px solid $ning-color4;
+    outline: 0;
+    margin-top: 5%;
+    border-radius: 0;
+    font-family: $ning-chinesefont;
+    font-size: 1.2rem;
+    display: block;
+  }
+
+  .lodging_nocturnalboxdetail {
+    height: 0;
+    overflow: hidden;
+    transition: 1.5s;
+  }
+
+  .lodging_nocturnaldetail {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 6%;
+  }
+
+  .nocturnal_introduce {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    .nocturnal_score {
+      width: 50px;
+      height: 50px;
+      background-color: $ning-color2;
+      border-radius: 6px 6px 6px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 40px;
+    }
+
+    .nocturnal_score p {
+      font-family: $ning-chinesefont;
+      font-size: 2rem;
+      color: $ning-color3;
+      margin: 0;
+    }
+
+    p {
+      font-family: $ning-chinesefont;
+      font-size: 1.6rem;
+      color: #777;
+      margin: 0;
+      margin-left: 10px;
+    }
+
+    p:hover {
+      color: $ning-color4;  
+    }
+  }
+
+  .nocturnal_introducetext {
+    width: 100%;
+    font-family: $ning-chinesefont;
+    font-size: 1.4rem;
+    color: $ning-color4;
+    word-wrap: normal;
+    white-space: pre-wrap;
+    margin-top: 5%;
+    line-height: 160%;
+  }
+
+  .nocturnal_equipment {
+    width: 100%;
+    display: flex;
+    margin-bottom: 15%;
+  }
+
+  .nocturnal_bath,
+  .nocturnal_other {
+    width: 50%;
+  }
+
+  .nocturnal_bathtitle,
+  .nocturnal_othertitle {
+    font-family: $ning-chinesefont;
+    font-size: 1.6rem;
+    color: $ning-color2;
+    border-left: 10px solid $ning-color2;
+    padding: 0 3%;
+    line-height: 1.6rem;
+    margin-top: 15%;
+  }
+
+  .nocturnal_bathtext,
+  .nocturnal_othertext {
+    font-family: $ning-chinesefont;
+    font-size: 1.4rem;
+    margin-top: 8%;
+    line-height: 2.8rem;
+  }
+
+  .nocturnal_introduceicon {
+    width: 60%;
+    height: 50%;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    figure {
+      width: 14%;
+      border-left: 1px solid #777;
+      padding: 2% 2%;
+      margin: 2% 0;
+      font-family: $ning-chinesefont;
+    }
+
+    figure:nth-child(7),
+    figure:nth-child(14) {
+      border-right: 1px solid #777;
+    }
+
+    img {
+      width: 80%;
+    }
+
+    fieldset {
+      margin-top: 20%;
+      font-size: 1.2rem;
+    }
+  }
+
+  /* nocturnal hover */
+
+  .lodging_nocturnal:hover {
+    img {
+      -webkit-filter: contrast(120%); /* Safari */
+      filter: contrast(120%);
+    }
+
+    .lodging_nocturnalname {
+      transition-duration: 0.8s;
+      right: 40%;
+    }
+  }
+
+  .lodging_nocturnal button:hover {
+    background-color: $ning-color2;
+  }
+
+  //tropical
+
+  .lodging_tropical {
+    width: 100%;
+    height: 35vw;
+    overflow: hidden;
+    position: relative;
+    margin-top: 1%;
+  }
+
+  .lodging_tropicalimg {
+    width: 70%;
+    right: 0;
+    object-fit: cover;
+    position: absolute;
+  }
+
+  .lodging_tropicalimgwrap {
+    right: 7%;
+    bottom: 5%;
+    position: absolute;
+    display: flex;
+  }
+
+  .lodging_tropicalimg1 {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    box-shadow: 0 0 2 #0000007b;
+    border: 2px solid $ning-color3;
+    cursor: pointer;
+  }
+
+  .lodging_tropicalimg1 img {
+    height: 100px;
+    object-fit: cover;
+  }
+
+  .lodging_tropicalimg2 {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    box-shadow: 0 0 2 #0000007b;
+    border: 2px solid $ning-color3;
+    cursor: pointer;
+    margin-left: 20px;
+  }
+
+  .lodging_tropicalimg2 img {
+    height: 100px;
+    object-fit: cover;
+  }
+
+  .lodging_tropicalimg3 {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    box-shadow: 0 0 10px #0000007b;
+    border: 2px solid $ning-color3;
+    cursor: pointer;
+    margin-left: 20px;
+  }
+
+  .lodging_tropicalimg3 img {
+    height: 100px;
+    object-fit: cover;
+  }
+
+  .lodging_tropicalname {
+    font-size: 5rem;
+    font-family: $ning-englishont;
+    color: $ning-color3;
+    font-weight: 500;
+    position: absolute;
+    left: 0;
+    bottom: 5%;
+  }
+
+  .lodging_tropicalbox {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(to right, $ning-color3 70%, #ffffff00 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .lodging_tropicalwrap {
+    width: 60%;
+
+    h4 {
+      font-family: $ning-englishont;
+      font-size: 2rem;
+      color: $ning-color4;
+    }
+
+    h1 {
+      font-family: $ning-chinesefont;
+      font-size: 2.8rem;
+      font-weight: 400;
+      color: $ning-color4;
+      margin-top: 3%;
+    }
+  }
+
+  .lodging_tropicalamount {
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+  }
+
+  .lodging_tropicalminus,
+  .lodging_tropicalplus {
+    width: 50px;
+    height: 50px;
+    background-color: $ning-color4;
+    color: $ning-color3;
+    border-radius: 0;
+  }
+
+  .lodging_tropicalvalue {
+    width: 60px;
+    height: 50px;
+    border-radius: 0;
+    border: 1px solid $ning-color4;
+    font-size: 18px;
+    font-family: $ning-chinesefont;
+    text-align: center;
+    line-height: 18px;
+    outline: 0;
+  }
+
+  .lodging_tropicalvalue:focus {
+    border-color: $ning-color2;
+    box-shadow: 0 0 0 #ffffff00;
+  }
+
+  .lodging_tropicaldetailbtn,
+  .tropicalreservation {
+    width: 60%;
+    height: 50px;
+    background-color: $ning-color4;
+    color: $ning-color3;
+    margin-top: 5%;
+    border-radius: 0;
+    font-family: $ning-chinesefont;
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+
+  .lodging_tropicalline {
+    width: 15%;
+    height: 1px;
+    background-color: $ning-color4;
+    margin: 15% 0 2% 0%;
+  }
+
+  .lodging_tropicallist1,
+  .lodging_tropicallist2,
+  .lodging_tropicallist3 {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    p {
+      font-family: $ning-chinesefont;
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: $ning-color4;
+      margin: 6% 0;
+    }
+  }
+
+
+  .tropical_introducebox {
+    width: 35%;
+    h2 {
+      font-family: $ning-chinesefont;
+      font-size: 2.5rem;
+      margin-top: 15%;
+    }
+
+    h2:nth-child(1) {
+      margin-top: 0%;
+    }
+  }
+
+  .lodging_tropicalincheck:focus,
+  .lodging_tropicaloutcheck:focus {
+    border-color: $ning-color2;
+    box-shadow: 0 0 0 #ffffff00;
+  }
+
+  .lodging_tropicalincheck,
+  .lodging_tropicaloutcheck {
+    width: 60%;
+    height: 50px;
+    color: $ning-color4;
+    border: 1px solid $ning-color4;
+    outline: 0;
+    margin-top: 5%;
+    border-radius: 0;
+    font-family: $ning-chinesefont;
+    font-size: 1.2rem;
+    font-weight: 400;
+    display: block;
+  }
+
+  .lodging_tropicalboxdetail {
+    height: 0;
+    overflow: hidden;
+    transition: 1.5s;
+  }
+
+  .lodging_tropicaldetail {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 6%;
+  }
+
+  .tropical_introduce {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    .tropical_score {
+      width: 50px;
+      height: 50px;
+      background-color: $ning-color2;
+      border-radius: 6px 6px 6px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 40px;
+    }
+
+    .tropical_score p {
+      font-family: $ning-chinesefont;
+      font-size: 2rem;
+      color: $ning-color3;
+      margin: 0;
+    }
+
+    p {
+      font-family: $ning-chinesefont;
+      font-size: 1.6rem;
+      color: #777;
+      margin: 0;
+      margin-left: 10px;
+    }
+
+    p:hover {
+      color: $ning-color4;  
+    }
+  }
+
+  .tropical_introducetext {
+    width: 100%;
+    font-family: $ning-chinesefont;
+    font-size: 1.4rem;
+    color: $ning-color4;
+    word-wrap: normal;
+    white-space: pre-wrap;
+    margin-top: 5%;
+    line-height: 160%;
+  }
+
+  .tropical_equipment {
+    width: 100%;
+    display: flex;
+    margin-bottom: 15%;
+  }
+
+  .tropical_bath,
+  .tropical_other {
+    width: 50%;
+  }
+
+  .tropical_bathtitle,
+  .tropical_othertitle {
+    font-family: $ning-chinesefont;
+    font-size: 1.6rem;
+    color: $ning-color2;
+    border-left: 10px solid $ning-color2;
+    padding: 0 3%;
+    line-height: 1.6rem;
+    margin-top: 15%;
+  }
+
+  .tropical_bathtext,
+  .tropical_othertext {
+    font-family: $ning-chinesefont;
+    font-size: 1.4rem;
+    margin-top: 8%;
+    line-height: 2.8rem;
+  }
+
+  .tropical_introduceicon {
+    width: 60%;
+    height: 50%;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    figure {
+      width: 14%;
+      border-left: 1px solid #777;
+      padding: 2% 2%;
+      margin: 2% 0;
+      font-family: $ning-chinesefont;
+    }
+
+    figure:nth-child(7),
+    figure:nth-child(14) {
+      border-right: 1px solid #777;
+    }
+
+    img {
+      width: 80%;
+    }
+
+    fieldset {
+      margin-top: 20%;
+      font-size: 1.2rem;
+    }
+  }
+
+  /* tropical hover */
+
+  .lodging_tropical:hover {
+    img {
+      -webkit-filter: contrast(120%); /* Safari */
+      filter: contrast(120%);
+    }
+
+    .lodging_tropicalname {
+      transition-duration: 0.8s;
+      left: 40%;
+    }
+  }
+  .lodging_tropicalwrap {
+    button:hover {
+      background-color: $ning-color2;
+    }
+  }
+
+  /* LodgingComment */
+
+  .commentcontainer,
+  .CommentFormcontainer {
+    overflow-y: scroll;
+    padding: 70px 80px 80px 80px;
+    width: 55%;
+    height: 100%;
+    background-color: $ning-color3;
+    position: fixed;
+    right: 0;
+    z-index: 2;
+    box-shadow: 0 0 15px #00000077;
+  }
+
+  .commentClose {
+    font-size: 3rem;
+    color: #999;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+  }
+
+  .commentClose:hover {
+    color: $ning-color2;
+  }
+
+  .lefticon {
+    font-size: 3rem;
+    color: #999;
+    cursor: pointer;
+    position: absolute;
+    left: 20px;
+  }
+
+  .lefticon:hover{
+    color: $ning-color2;
+  }
+
+
+  .commentTotalbox {
+    width: 100%;
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .commentTotalScorewrap {
+    display: flex;
+    align-items: center;
+  }
+
+  .commentTotalScore {
+    width: 50px;
+    height: 50px;
+    font-size: 2.3rem;
+    font-family: $ning-chinesefont;
+    color: $ning-color3;
+    background-color: $ning-color2;
+    border-radius: 15% 15% 15% 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+
+  .commentTotal {
+    font-size: 1.8rem;
+    font-family: $ning-chinesefont;
+    color: #777;
+    margin-left: 10px;
+    margin-bottom: 0;
+  }
+
+  .writecomment {
+    width: 120px;
+    height: 40px;
+    border: 1px solid $ning-color2;
+    border-radius: 0;
+    font-size: 1.3rem;
+    color: $ning-color2;
+    font-family: $ning-chinesefont;
+  }
+
+  .writecomment:hover {
+    border: 0px;
+    border-radius: 0;
+    font-size: 1.3rem;
+    color: $ning-color3;
+    background-color: $ning-color2;
+    font-family: $ning-chinesefont;
+  }
+
+  .nowritecomment {
+    width: 120px;
+    height: 40px;
+    border: 1px solid #999;
+    border-radius: 0;
+    font-size: 1.3rem;
+    color: #999;
+    font-family: $ning-chinesefont;
+    pointer-events: none;
+  }
+
+  .commentline {
+    width: 100%;
+    height: 1.2px;
+    background-color: #ccc;
+    margin: 20px 0;
+  }
+
+  .commentScore,
+  .commentfilter,
+  .guestComment,
+  .orderInformation {
+    font-size: 1.8rem;
+    font-family: $ning-chinesefont;
+    font-weight: 400;
+  }
+
+  .commentScorebox {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .Servebox,
+  .Cleanbox,
+  .Comfortablebox,
+  .Facilitybox,
+  .CPValuebox,
+  .nullbox {
+    width: 30%;
+    padding-top: 4%;
+  }
+
+  .Serve,
+  .Clean,
+  .Comfortable,
+  .Facility,
+  .CPValue {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .ServeText,
+  .ServeScore,
+  .CleanText,
+  .CleanScore,
+  .ComfortableText,
+  .ComfortableScore,
+  .FacilityText,
+  .FacilityScore,
+  .CPValueText,
+  .CPValueScore {
+    font-size: 1.4rem;
+    font-family: $ning-chinesefont;
+    margin-bottom: 0;
+    padding-bottom: 3%;
+  }
+
+  .ServeScroll,
+  .CleanScroll,
+  .ComfortableScroll,
+  .FacilityScroll,
+  .CPValueScroll {
+    position: relative;
+  }
+
+  .Scrollline {
+    width: 100%;
+    height: 5px;
+    background-color: #ccc;
+    position: absolute;
+  }
+
+  .ServeScrollScore {
+    width: 90%;
+    height: 5px;
+    background-color: $ning-color2;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .CleanScrollScore {
+    width: 90%;
+    height: 5px;
+    background-color: $ning-color2;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .ComfortableScrollScore {
+    width: 90%;
+    height: 5px;
+    background-color: $ning-color2;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .FacilityScrollScore {
+    width: 90%;
+    height: 5px;
+    background-color: $ning-color2;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .CPValueScrollScore {
+    width: 90%;
+    height: 5px;
+    background-color: $ning-color2;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .commentfilterbox {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 4%;
+  }
+
+  .selectScore,
+  .selectDate,
+  .selectSort {
+    width: 30%;
+    height: 50px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: $ning-chinesefont;
+    color: #777;
+    border-radius: 0px;
+    appearance: none;
+    background: url(../../../public/img/lodging/selectIcon.svg) 100% / 15%
+      no-repeat;
+      border: 1px solid $ning-color4;
+    outline: 0;
+  }
+
+  .selectScore:hover,
+  .selectDate:hover,
+  .selectSort:hover{
+    border-color: $ning-color2;
+    box-shadow: 0 0 0 #ffffff00;
+  }
+
+  .guestCommentwrap {
+    margin-top: 4%;
+  }
+  .guestbox {
+    display: flex;
+    align-items: center;
+    padding-bottom: 2%;
+    margin-bottom: 2%;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .guestCommentbox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .guestInformation {
+    display: flex;
+    align-items: center;
+    width: 35%;
+    justify-content: space-between;
+  }
+
+  .guestimg {
+    width: 25%;
+    width: 25%;
+    border-radius: 50%;
+    background-color: $ning-color5;
+    overflow: hidden;
+  }
+
+  .guestimg img {
+    width: 120%;
+    object-fit: cover;
+  }
+
+  .guestNameDate {
+    width: 70%;
+  }
+
+  .guestName {
+    font-size: 1.6rem;
+    font-family: $ning-chinesefont;
+  }
+
+  .cleckinDate {
+    display: flex;
+    align-items: center;
+
+    p {
+      color: #777;
+      font-size: 1.4rem;
+      font-family: $ning-chinesefont;
+      margin-bottom: 0;
+
+      span {
+        color: #777;
+        font-size: 1.4rem;
+        font-family: $ning-chinesefont;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .DateIcon {
+    color: #777;
+    font-size: 1.6rem;
+  }
+  .guestCommentTextbox {
+    width: 40%;
+  }
+
+  .guestCommentText {
+    width: 100%;
+    font-size: 1.2rem;
+    font-family: $ning-chinesefont;
+    margin-bottom: 0;
+    word-wrap: normal;
+    white-space: pre-wrap;
+    text-align: center;
+  }
+
+  .guestScore {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    font-family: $ning-chinesefont;
+    color: $ning-color3;
+    background-color: $ning-color2;
+    border-radius: 6px 6px 6px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+  }
+
+//收放特效
+  // .navigation {
+  //   width: 30px;
+  //   height: 40px;
+  //   cursor: pointer;
+  //   transition: 0.5s;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+
+  //   span {
+  //     width: 5px;
+  //     height: 5px;
+  //     background-color: $ning-color2;
+  //     border-radius: 50%;
+  //     position: absolute;
+  //     transition: 0.5s;
+  //   }
+  // }
+
+  // .navigation span i {
+  //   color: transparent;
+  //   font-size: 1.5rem;
+  // }
+
+  // .navigation span:nth-child(1) {
+  //   transform: translateY(-6px);
+  // }
+
+  // .navigation span:nth-child(2) {
+  //   transform: translateY(6px);
+  // }
+
+  // .navigation.active {
+  //   width: 100px;
+
+
+  .navigation.active {
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid $ning-color2;
+      background-color: transparent;
+      margin-right: 2px;
+    }
+  }
+
+  .navigation.active span i {
+    color: $ning-color2;
+    font-size: 1.5rem;
+  }
+
+  .navigation.active span:hover {
+    background-color: $ning-color2;
+  }
+
+  .navigation.active span:hover i {
+    color: $ning-color3;
+  }
+
+  .orderInformationbox {
+    width: 100%;
+    padding-top: 30px;
+  }
+
+  .orderInformation,
+  .commentTextarea {
+    font-size: 1.8rem;
+    font-family: $ning-chinesefont;
+    font-weight: 400;
+  }
+
+  .orderList,
+  .commentScoreList {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+
+  .orderNumber,
+  .orderRoom,
+  .orderCheckinDate,
+  .orderCheckoutDate {
+    width: 40%;
+    font-size: 1.4rem;
+    font-family: $ning-chinesefont;
+
+    span {
+      color: #777;
+    }
+  }
+
+  .commentServebox,
+  .commentCleanbox,
+  .commentComfortablebox,
+  .commentFacilitybox,
+  .commentCPValuebox {
+    width: 42%;
+  }
+
+  .serveSliderBox,
+  .cleanSliderBox,
+  .comfortableSliderBox,
+  .facilitySliderBox,
+  .CPValueSliderBox {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -18px;
+    margin-bottom: 10px;
+  }
+
+  .commentServeScore,
+  .commentCleanScore,
+  .commentComfortableScore,
+  .commentFacilityScore,
+  .commentCPValueScore {
+    font-family: $ning-chinesefont;
+    font-size: 2rem;
+    margin-bottom: 0;
+    margin-left: 10px;
+  }
+
+  .ning_commentTextareabox {
+    border-radius: 0;
+    border: 1px solid $ning-color4;
+    outline: 0;
+    font-size: 1.2rem;
+    font-family: $ning-chinesefont;
+    margin-top: 15px;
+  }
+
+  .ning_commentTextareabox:hover {
+    border-color: $ning-color2;
+    box-shadow: 0 0 0 #ffffff00;
+  }
+
+  .ning_commentTextareabox:focus { 
+    outline: none ;
+    border-color: $ning-color2;
+    box-shadow: 0 0 0 #ffffff00;
+ 
+  }
+
+
+
+  .commentbtngroup {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .commentbtn,
+  .cancelbtn {
+    width: 150px;
+    height: 50px;
+    background-color: $ning-color4;
+    font-size: 1.5rem;
+    font-family: $ning-chinesefont;
+    color: $ning-color3;
+    text-align: center;
+    border-radius: 0;
+    margin: 30px 10px;
+  }
+
+  .commentbtn:hover,
+  .cancelbtn:hover {
+    background-color: $ning-color2;
+  }
+
+  .room_Modalyesbtn {
+    width: 80px;
+    height: 40px;
+    background-color: $ning-color4;
+    font-size: 1.3rem;
+    font-family: $ning-chinesefont;
+    color: $ning-color3;
+    text-align: center;
+    border-radius: 0;
+  }
+
+  .room_Modalnobtn {
+    width: 100px;
+    height: 40px;
+    background-color: $ning-color4;
+    font-size: 1.3rem;
+    font-family: $ning-chinesefont;
+    color: $ning-color3;
+    text-align: center;
+    border-radius: 0;
+  }
+
+  .room_ModalTitle {
+    font-size: 2rem;
+    font-family: $ning-chinesefont;
+    color: $ning-color4;
+  }
+
+  .room_ModalBody{
+    font-size: 1.5rem;
+    font-family: $ning-chinesefont;
+    color: $ning-color4;
+  }
+
+  .room_Modalyesbtn:hover {
+    background-color: $ning-color1;
+    color: $ning-color3;
+  }
+
+  .room_Modalnobtn:hover {
+    background-color: $ning-color1;
+    color: $ning-color3;
+  }
+
+
+  .room_Modaldeletbtn ,
+  .room_ModalAddbtn {
+    width: 80px;
+    height: 40px;
+    background-color: $ning-color4;
+    font-size: 1.3rem;
+    font-family: $ning-chinesefont;
+    color: $ning-color3;
+    text-align: center;
+    border-radius: 0;
+  }
+
+  .room_Modalnodeletbtn ,
+  .room_ModalnoAddbtn {
+    width: 80px;
+    height: 40px;
+    background-color: $ning-color4;
+    font-size: 1.3rem;
+    font-family: $ning-chinesefont;
+    color: $ning-color3;
+    text-align: center;
+    border-radius: 0;
+  }
+
+
+  .room_Modaldeletbtn:hover,
+  .room_ModalAddbtn:hover {
+    background-color: $ning-color1;
+    color: $ning-color3;
+  }
+
+  .room_Modalnodeletbtn:hover,
+  .room_ModalnoAddbtn:hover {
+    background-color: $ning-color1;
+    color: $ning-color3;
+  }
+  
+
+}

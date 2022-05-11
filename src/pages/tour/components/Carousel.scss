@@ -1,0 +1,61 @@
+.Carousel {
+    position: relative;
+    // height: 300px;
+    left: -10px;
+  
+  }
+  
+  .Carousel__railWrapper {
+    overflow: hidden;
+  }
+  
+  .Carousel__rail {
+    display: grid;
+    position: relative;
+    transition: left 0.5s cubic-bezier(0.2, 1, 0.3, 1) 0s;
+  }
+  
+  .Carousel__btn--prev,
+  .Carousel__btn--next {
+    position: absolute;
+    top: calc(50% - 6px);
+    height:20px;
+    width: 20px;
+    background: transparent;
+    border-top: 5px solid rgb(250, 246, 246);
+    border-right: 5px solid rgb(252, 249, 249);
+    z-index: 10;
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+  
+  .Carousel__btn--prev {
+    left: -15px;
+    transform: rotate(-135deg);
+  }
+  
+  .Carousel__btn--next {
+    right: 3px;
+    transform: rotate(45deg);
+  }
+  // .figure{
+  //   height: 150px;
+  //   width: 150px;
+  // }
+  .Carousel__railWrapper{
+    width: 100%;
+  }
+
+  @media screen and (min-width: 980px) {
+    .Carousel__railWrapper {
+      width:100%;
+    }
+    .Carousel__btn--next {
+      right: 50px;
+    }
+    // .Carousel {
+    //   position: relative;
+    //   left: 150px;
+    
+    // }
+  }

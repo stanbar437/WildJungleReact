@@ -1,0 +1,493 @@
+$ning-color1: #eb5c37;
+$ning-color2: #f9b112;
+$ning-color3: #ffffff;
+$ning-color4: #000000;
+$ning-color5: #1b7754;
+$ning-chinesefont: "Noto Sans", sans-serif;
+$ning-englishont: "Playfair Display", serif;
+
+@mixin mobile {
+  @media screen and (max-width: 375px) {
+    @content;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .mb_container {
+    padding: 0 30px;
+  }
+
+  .loding_titlebox {
+    width: 100%;
+    height: 60vw;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+
+  .loding_title {
+    width: 100%;
+    text-align: center;
+    h2 {
+      font-family: $ning-englishont;
+      font-weight: 600;
+      font-size: 4rem;
+      margin-top: 50%;
+    }
+
+    p {
+      width: 100%;
+      font-family: $ning-chinesefont;
+      color: $ning-color4;
+      word-wrap: normal;
+      white-space: pre-wrap;
+      font-size: 1rem;
+      line-height: 2rem;
+      margin-top: 8%;
+    }
+  }
+
+  .lodging_ocean {
+    margin-top: 30%;
+    width: 100%;
+    padding: 0 30px;
+  }
+
+  .lodging_oceanimg,
+  .lodging_iceimg,
+  .lodging_nocturnalimg,
+  .lodging_tropicalimg {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 3%;
+  }
+
+  .lodging_oceanimgwrap,
+  .lodging_iceimgwrap,
+  .lodging_nocturnalimgwrap,
+  .lodging_tropicalimgwrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .lodging_oceanimg1 , .lodging_oceanimg2 , .lodging_oceanimg3  {
+    width:31%;
+    overflow: hidden;
+  }
+
+  .lodging_oceanimg1 img , .lodging_oceanimg2 img , .lodging_oceanimg3 img  {
+    width: 100%;
+    height: 70px;
+    object-fit: cover;
+  }
+  .lodging_iceimg1 , .lodging_iceimg2 , .lodging_iceimg3  {
+    width:31%;
+    overflow: hidden;
+  }
+
+  .lodging_iceimg1 img , .lodging_iceimg2 img , .lodging_iceimg3 img  {
+    width: 100%;
+    height: 70px;
+    object-fit: cover;
+  }
+  .lodging_nocturnalimg1 , .lodging_nocturnalimg2 , .lodging_nocturnalimg3  {
+    width:31%;
+    overflow: hidden;
+  }
+
+  .lodging_nocturnalimg1 img , .lodging_nocturnalimg2 img , .lodging_nocturnalimg3 img  {
+    width: 100%;
+    height: 70px;
+    object-fit: cover;
+  }
+  .lodging_tropicalimg1 , .lodging_tropicalimg2 , .lodging_tropicalimg3  {
+    width:31%;
+    overflow: hidden;
+  }
+
+  .lodging_tropicalimg1 img , .lodging_tropicalimg2 img , .lodging_tropicalimg3 img  {
+    width: 100%;
+    height: 70px;
+    object-fit: cover;
+  }
+
+  .lodging_oceanname,
+  .lodging_oceantitle h4,
+  .lodging_icename,
+  .lodging_icetitle h4,
+  .lodging_nocturnalname,
+  .lodging_nocturnaltitle h4,
+  .lodging_tropicalname,
+  .lodging_tropicaltitle h4 {
+    display: none;
+  }
+
+  .lodging_oceantitle,
+  .lodging_icetitle,
+  .lodging_nocturnaltitle,
+  .lodging_tropicaltitle {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+    h1 {
+      font-family: $ning-chinesefont;
+      color: $ning-color4;
+      font-size: 2.4rem;
+      font-weight: 400;
+    }
+
+    .lodging_oceanprice,
+    .lodging_iceprice,
+    .lodging_nocturnalprice,
+    .lodging_tropicalprice {
+      p {
+        display: none;
+      }
+      h3 {
+        font-family: $ning-chinesefont;
+        color: $ning-color4;
+        font-size: 2.4rem;
+        font-weight: 500;
+      }
+      span {
+        font-family: $ning-chinesefont;
+        color: $ning-color4;
+        font-size: 1.6rem;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .lodging_oceanlist1,
+  .lodging_oceanlist2,
+  .lodging_oceanlist3,
+  .lodging_oceanlist4,
+  .lodging_icelist1,
+  .lodging_icelist2,
+  .lodging_icelist3,
+  .lodging_icelist4,
+  .lodging_nocturnallist1,
+  .lodging_nocturnallist2,
+  .lodging_nocturnallist3,
+  .lodging_nocturnallist4,
+  .lodging_tropicallist1,
+  .lodging_tropicallist2,
+  .lodging_tropicallist3,
+  .lodging_tropicallist4 {
+    display: none;
+  }
+
+
+  .ocean_introducebox h2 , .ice_introducebox h2 , .nocturnal_introducebox h2, .tropical_introducebox h2{
+    font-family: $ning-chinesefont;
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 0;
+    margin-top: 15%;
+  }
+
+  .ocean_introduce , .ice_introduce , .nocturnal_introduce , .tropical_introduce{
+    display: flex;
+    align-items: center;
+    margin-top: 15%;
+
+    h2 {
+      font-family: $ning-chinesefont;
+      font-size: 2rem;
+      font-weight: 500;
+      margin: 0;
+    }
+
+    .ocean_score , .ice_score, .nocturnal_score, .tropical_score{
+      width: 40px;
+      height: 40px;
+      background-color: $ning-color2;
+      border-radius: 5px 5px 5px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 5%;
+
+      p {
+        font-family: $ning-chinesefont;
+        font-size: 1.6rem;
+        color: $ning-color3;
+        margin: 0;
+      }
+    }
+    p {
+      font-family: $ning-chinesefont;
+      font-size: 1.4rem;
+      color: #777;
+      margin: 0;
+      margin-left: 5%;
+    }
+  }
+
+  .ocean_introducetext , .ice_introducetext , .nocturnal_introducetext , .tropical_introducetext{
+    width: 100%;
+    font-family: $ning-chinesefont;
+    font-size: 1.4rem;
+    color: $ning-color4;
+    word-wrap: normal;
+    white-space: pre-wrap;
+    margin-top: 10%;
+    line-height: 160%;
+    font-weight: 400;
+  }
+
+  .ocean_equipment , .ice_equipment , .nocturnal_equipment , .tropical_equipment {
+    width: 100%;
+    display: flex;
+    margin-bottom: 15%;
+  }
+
+  .ocean_bath,
+  .ocean_other , .ice_bath,
+  .ice_other , .nocturnal_bath,
+  .nocturnal_other , .tropical_bath,
+  .tropical_other {
+    width: 50%;
+  }
+
+  .ocean_bathtitle,
+  .ocean_othertitle , .ice_bathtitle,
+  .ice_othertitle , .nocturnal_bathtitle,
+  .nocturnal_othertitle , .tropical_bathtitle,
+  .tropical_othertitle {
+    font-family: $ning-chinesefont;
+    font-size: 1.6rem;
+    color: $ning-color2;
+    border-left: 10px solid $ning-color2;
+    padding: 0 3%;
+    line-height: 1.6rem;
+    margin-top: 15%;
+  }
+
+  .ocean_bathtext,
+  .ocean_othertext , .ice_bathtext,
+  .ice_othertext , .nocturnal_bathtext,
+  .nocturnal_othertext , .tropical_bathtext,
+  .tropical_othertext {
+    font-family: $ning-chinesefont;
+    font-size: 1.4rem;
+    margin-top: 8%;
+    line-height: 2.8rem;
+  }
+
+  .ocean_introduceicon ,.ice_introduceicon ,.nocturnal_introduceicon ,.tropical_introduceicon{
+    display: none;
+    // width: 100%;
+    // height: 50%;
+    // text-align: center;
+    // display: flex;
+    // flex-wrap: wrap;
+    // align-items: center;
+    // figure {
+    //   width: 25%;
+    //   border-left: 1px solid #777;
+    //   padding: 3% 3%;
+    //   margin: 2% 0;
+    //   font-family: $ning-chinesefont;
+    // }
+
+    // figure:nth-child(4),
+    // figure:nth-child(8),
+    // figure:nth-child(12),
+    // figure:nth-child(14) {
+    //   border-right: 1px solid #777;
+    // }
+
+    // img {
+    //   width: 80%;
+    // }
+
+    // fieldset {
+    //   margin-top: 20%;
+    //   font-size: 1.2rem;
+    // }
+  }
+
+  .lodging_oceanamount , .lodging_iceamount , .lodging_nocturnalamount , .lodging_tropicalamount{
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .lodging_oceanminus,
+  .lodging_oceanplus , .lodging_iceminus,
+  .lodging_iceplus , .lodging_nocturnalminus,
+  .lodging_nocturnalplus , .lodging_tropicalminus,
+  .lodging_tropicalplus{
+    width: 50px;
+    height: 50px;
+    background-color: $ning-color4;
+    color: $ning-color3;
+    border-radius: 0;
+  }
+
+  .lodging_oceanvalue , .lodging_icevalue , .lodging_nocturnalvalue , .lodging_tropicalvalue{
+    width: 80px;
+    height: 50px;
+    border-radius: 0;
+    border: 1px solid $ning-color4;
+    font-size: 18px;
+    font-family: $ning-chinesefont;
+    text-align: center;
+    line-height: 18px;
+    outline: 0;
+  }
+
+  .lodging_oceanvalue:focus , .lodging_icevalue:focus , .lodging_nocturnalvalue:focus , .lodging_tropicalvalue:focus{
+    border-color: $ning-color2;
+    box-shadow: 0 0 0 #ffffff00;
+  }
+
+  .lodging_oceandetailbtn,
+  .lodging_icedetailbtn,
+  .lodging_nocturnaldetailbtn,
+  .lodging_tropicaldetailbtn
+    {
+    width: 100%;
+    height: 50px;
+    background-color: $ning-color4;
+    font-family: $ning-chinesefont;
+    color: $ning-color3;
+    font-size: 1.2rem;
+    font-weight: 400;
+    border-radius: 0;
+    margin-top: 5%;
+    margin-bottom: 15%;
+  }
+
+ 
+  .oceanreservation ,
+  .icereservation , 
+  .nocturnalreservation , 
+  .tropicalreservation  {
+    width: 100%;
+    height: 50px;
+    background-color: $ning-color4;
+    font-family: $ning-chinesefont;
+    color: $ning-color3;
+    font-size: 1.2rem;
+    font-weight: 400;
+    border-radius: 0;
+    margin-top: 5%;
+  }
+
+  .lodging_oceanincheck:focus,
+  .lodging_oceanoutcheck:focus , .lodging_iceincheck:focus,
+  .lodging_iceoutcheck:focus, .lodging_nocturnalincheck:focus,
+  .lodging_nocturnaloutcheck:focus, .lodging_tropicalincheck:focus,
+  .lodging_tropicaloutcheck:focus {
+    border-color: $ning-color2;
+    box-shadow: 0 0 0 #ffffff00;
+  }
+
+  .lodging_oceanincheck,
+  .lodging_oceanoutcheck , .lodging_iceincheck,
+  .lodging_iceoutcheck , .lodging_nocturnalincheck,
+  .lodging_nocturnaloutcheck , .lodging_tropicalincheck,
+  .lodging_tropicaloutcheck {
+    width: 100%;
+    height: 50px;
+    color: $ning-color4;
+    border: 1px solid $ning-color4;
+    margin-top: 5%;
+    border-radius: 0;
+    font-family: $ning-chinesefont;
+    font-size: 1.2rem;
+    font-weight: 400;
+    display: block;
+  }
+
+  .lodging_oceanboxdetail , .lodging_iceboxdetail , .lodging_nocturnalboxdetail , .lodging_tropicalboxdetail{
+    height: 0;
+    overflow: hidden;
+    transition: 1.5s;
+  }
+
+  .lodging_ice,
+  .lodging_nocturnal,
+  .lodging_tropical {
+    width: 100%;
+    padding: 0 30px;
+  }
+
+  .yearAndMonth {
+    font-family: $ning-chinesefont;
+    font-size: 1.8rem;
+    margin: 20px 0 5px 0;
+
+    span {
+      font-size: 1.2rem;
+      color: #777;
+    }
+  }
+
+  .ning_datebox {
+    width: 100%;
+    font-family: $ning-chinesefont;
+    display: flex;
+    justify-content: end;
+  }
+
+  .ning_table {
+    width: 100%;
+    height: 200px;
+    border: 1px solid $ning-color4;
+    text-align: center;
+
+    .ning_tr {
+     background-color:$ning-color2;
+     border: 1px solid $ning-color4;
+      th {
+        padding: 5px 0;
+        color: $ning-color3;
+      }
+    }
+  }
+
+
+  .ning_tbody td:hover {
+    background-color: #f9b012b0;
+  }
+
+  .room_Modalyesbtn {
+    width: 80px;
+    height: 40px;
+    background-color: $ning-color4;
+    font-size: 1.3rem;
+    font-family: $ning-chinesefont;
+    color: $ning-color3;
+    text-align: center;
+    border-radius: 0;
+  }
+
+  .room_Modalnobtn {
+    width: 100px;
+    height: 40px;
+    background-color: $ning-color1;
+    font-size: 1.3rem;
+    font-family: $ning-chinesefont;
+    color: $ning-color3;
+    text-align: center;
+    border-radius: 0;
+  }
+
+  .room_ModalTitle {
+    font-size: 2rem;
+    font-family: $ning-chinesefont;
+    color: $ning-color4;
+  }
+
+  .room_ModalBody{
+    font-size: 1.5rem;
+    font-family: $ning-chinesefont;
+    color: $ning-color4;
+  }
+
+}

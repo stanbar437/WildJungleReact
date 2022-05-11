@@ -1,0 +1,548 @@
+.psycho_container {
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: rgb(249,177,18);
+    margin-bottom: -400px;
+}
+.game_title{
+    padding-top: 2rem;
+    width: 100%;
+    font-size: 4rem;
+    color: black;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 50px;
+    font-family: sans-serif;
+}
+.game_profile{
+    margin-top: 2rem;
+    text-align: center; 
+    color: black;
+    line-height: 27px;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+}
+.game_profile span{
+    color: red;
+    
+    font-weight: 800;
+}
+.leaf_left{
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    top: 20px;
+    left: 0;
+}
+.cloud_left{
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    top: 205px;
+    left: 490px;
+}
+.cloud_left1{
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    top: 270px;
+    left: 250px;
+}
+.cloud_right{
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    top: 175px;
+    right: 350px;
+}
+.cloud_right1{
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    top: 265px;
+    right: 95px;
+}
+.leaf_left img{
+    width: 100%;
+    height: auto;
+}
+.leaf_right{
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    top: 20px;
+    right: 0;
+}
+.leaf_right img{
+    width: 100%;
+    height: auto;
+}
+.container_psycho_game {
+    position: relative;
+    width: calc(100% - 300px);
+    height: 800px;
+    margin: 40px auto;
+    background-color: rgb(49, 40, 8);
+    border-radius: 30px;
+    overflow: hidden;
+}
+.psycho_clownFish{
+    position: absolute;
+    left: 21%;
+    top: 800px;
+    z-index: 0;
+    animation: swim 10s linear infinite;
+}
+@keyframes swim {
+    from{
+        left: 18%;
+    }
+    to{
+        left:30%;
+        /* top:1600px; */
+    }
+}
+.psycho_atalanFish{
+    position: absolute;
+    left: 6.667%;
+    top: 1600px;
+    z-index: 0;
+    animation: swim2 10s linear infinite;
+}
+@keyframes swim2 {
+    from{
+        left: 16%;
+    }
+    to{
+        left: 2%;
+        /* top:1600px; */
+    }
+}
+.psycho_bg{
+    position: relative;
+    width: 1500%;
+    height: 3200px;
+    background: linear-gradient(to bottom, #00b0bd, #003134);
+    transform: translateX(-40.002%);
+}
+/* 第一題的所有屬性 */
+.psycho_q1 {
+    position: absolute;
+    top: 0;
+    left: 40.002%;
+    width: 6.667%;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.q1_img{
+    position: absolute;
+    width: 200px;
+    height: auto;
+    left: 55%;
+}
+.q1_img2{
+    position: absolute;
+    width: 500px;
+    height: auto;
+    left: -30px;
+    bottom: -100px;
+    z-index: -2;
+}
+.q2_img{
+    position: absolute;
+    width: 350px;
+    height: auto;
+    right: 500px;
+    bottom: -50px;
+    z-index: -2;
+}
+.q2_img2{
+    position: absolute;
+    width: 600px;
+    height: auto;
+    left: -10px;
+    bottom: 0px;
+    z-index: -2;
+}
+.q3_img{
+    position: absolute;
+    width: 350px;
+    height: auto;
+    right: -50px;
+    top: 100px;
+    z-index: 1;
+    transform: rotate(-60deg);
+}
+.q3_img2{
+    position: absolute;
+    width: 900px;
+    height: auto;
+    left: -10px;
+    bottom: -60px;
+    z-index: -2;
+}
+.q3_img3{
+    position: absolute;
+    width: 270px;
+    height: 455px;
+    left: 40px;
+    bottom: -60px;
+    z-index: -3;
+    animation: swag 5s linear alternate infinite ;
+    transform-origin: bottom center;
+}
+@keyframes swag {
+    from{
+        transform:rotate(10deg);
+    }
+    to{
+        transform:rotate(-10deg);
+    }
+}
+.psycho_bg h2{
+    color: white;
+    width: 100%;
+    font-size: 5rem;
+    font-weight: 600;
+    font-family: sans-serif;
+    text-align: center;
+    margin-top: -10rem;
+    margin-bottom: 10rem;
+}
+.psycho_btnGroup{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.psycho_btnGroup button{
+    width:280px;
+    /* height: 200px; */
+    border: none;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: sans-serif;
+    background-color: transparent;
+    color: #00b0bd;
+    cursor: pointer;
+}
+.psycho_leftBtn_cloud{
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 95px;
+    left: 0;
+    z-index: -1;
+}
+.psycho_rightBtn_cloud{
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 95px;
+    left: 0;
+    z-index: -1;
+}
+.psycho_help {
+    text-align: center;
+    line-height: 35px;
+    width: 40px;
+    height: 40px;
+    margin-left: 30px;
+    font-size: 1.5rem;
+    color: white;
+    border: 2px solid gold;
+    border-radius: 50%;
+}
+@keyframes psycho_row1_left {
+    0%{
+        transform: translateX(-40.002%);
+    }
+    50%{
+        transform: translateX(-20.001%);
+    }
+    100%{
+        transform: translateX(-20.001%)
+        translateY(-800px);
+    }
+}
+@keyframes psycho_row1_right {
+    0%{
+        transform: translateX(-40.002%);
+    }
+    50%{
+        transform: translateX(-73.337%);
+    }
+    100%{
+        transform: translateX(-73.337%)
+        translateY(-800px);
+    }
+}
+/* 第二層左側的題目 */
+.psycho_q2 {
+    position: absolute;
+    top: 800px;
+    left: 20.001%;
+    width: 6.667%;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+@keyframes psycho_row21_left {
+    0%{
+        transform: translateX(-20.001%)
+        translateY(-800px);
+    }
+    50%{
+        transform: translateX(-6.667%)
+        translateY(-800px);
+    }
+    100%{
+        transform: translateX(-6.667%)
+        translateY(-1600px);
+    }
+}
+@keyframes psycho_row21_right {
+    0%{
+        transform: translateX(-20.001%)
+        translateY(-800px);
+    }
+    50%{
+        transform: translateX(-33.335%)
+        translateY(-800px);
+    }
+    100%{
+        transform: translateX(-33.335%)
+        translateY(-1600px);
+    }
+}
+/* 第二層右側的題目 */
+.psycho_q3 {
+    position: absolute;
+    top: 800px;
+    left: 73.337%;
+    width: 6.667%;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+@keyframes psycho_row22_left {
+    0%{
+        transform: translateX(-73.337%)
+        translateY(-800px);
+    }
+    50%{
+        transform: translateX(-60.003%)
+        translateY(-800px);
+    }
+    100%{
+        transform: translateX(-60.003%)
+        translateY(-1600px);
+    }
+}
+@keyframes psycho_row22_right {
+    0%{
+        transform: translateX(-73.337%)
+        translateY(-800px);
+    }
+    50%{
+        transform: translateX(-86.674%)
+        translateY(-800px);
+    }
+    100%{
+        transform: translateX(-86.674%)
+        translateY(-1600px);
+    }
+}
+/* 第三層左左側的題目 */
+.psycho_q4 {
+    position: absolute;
+    top: 1600px;
+    left: 6.667%;
+    width: 6.667%;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+@keyframes psycho_row31_left {
+    0%{
+        transform: translateX(-6.667%)
+        translateY(-1600px);
+    }
+    50%{
+        transform: translateX(0%)
+        translateY(-1600px);
+    }
+    100%{
+        transform: translateX(0%)
+        translateY(-2400px);
+    }
+}
+@keyframes psycho_row31_right {
+    0%{
+        transform: translateX(-6.667%)
+        translateY(-1600px);
+    }
+    50%{
+        transform: translateX(-13.334%)
+        translateY(-1600px);
+    }
+    100%{
+        transform: translateX(-13.334%)
+        translateY(-2400px);
+    }
+}
+/* 第三層左側的題目 */
+.psycho_q5 {
+    position: absolute;
+    top: 1600px;
+    left: 33.335%;
+    width: 6.667%;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/* 第三層右側的題目 */
+.psycho_q6 {
+    position: absolute;
+    top: 1600px;
+    left: 60.003%;
+    width: 6.667%;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/* 第三層右右側的題目 */
+.psycho_q7 {
+    position: absolute;
+    top: 1600px;
+    left: 86.674%;
+    width: 6.667%;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.psycho_result1 {
+    position: absolute;
+    top: 2400px;
+    left: 0;
+    width: 6.667%;
+    height: 800px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.psycho_result_left{
+    width: 46%;
+    height: 750px;
+    background-color: rgb(27,119,84);
+    border-radius: 30px;
+    text-align: center;
+    color: white;
+}
+.psycho_result_left p{
+    font-size: 2rem;
+    font-family: sans-serif;
+    margin-top: 2rem;
+}
+.psycho_result_left>p>span{
+    font-size: 3rem;
+    font-weight: 600;
+}
+.psycho_result_left h3{
+    font-size: 5rem;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+.psycho_result_left img{
+    width: 40%;
+    height: auto;
+}
+.psycho_shopBtn{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    width: 260px;
+    height: 200px;
+    position: relative;
+    cursor: pointer;
+    bottom: 50px;
+    margin: 15px auto;
+}
+.psycho_shopBtn p{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-90%);
+    font-size: 3rem;
+    font-weight: 600;
+    color: #eb5c37;
+    pointer-events: none;
+}
+.psycho_shopBtn img{
+    width: 100%;
+    height: auto;
+}
+/* 以下是右半部 */
+.psycho_result_right{
+    width: 46%;
+    height: 750px;
+    background-color: rgb(235,92,55);
+    border-radius: 30px;
+    text-align: center;
+    color: white;
+}
+.psycho_result_right p{
+    width: 100%;
+    font-size: 2rem;
+    font-family: sans-serif;
+    margin-top: 2rem;
+}
+.psycho_result_right p:nth-of-type(3){
+    width: 60%;
+    font-size: 2rem;
+    font-family: sans-serif;
+    margin-top: 2rem;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    margin: 32px auto;
+}
+.psycho_result_right h3{
+    font-size: 5rem;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+.psycho_result_right img{
+    width: 25%;
+    height: auto;
+}
+
+
+
+
+
+.animals-footer{
+    width: 100%; 
+}
+.animals-footer img{
+    width: 100%;
+    height: auto;
+    border: none;  
+}
+@media (min-width:701px) and (max-width:1400px) {
+    .psycho_container{
+        margin-bottom: -280px;
+    }
+    .animals-footer{
+        margin-top: 150px;
+    }
+}

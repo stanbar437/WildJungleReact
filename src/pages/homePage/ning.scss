@@ -1,0 +1,1643 @@
+$ning-color1: #eb5c37;
+$ning-color2: #f9b112;
+$ning-color3: #ffffff;
+$ning-color4: #000000;
+$ning-color5: #1b7754;
+$ning-chinesefont: "Noto Sans", sans-serif;
+$ning-englishont: "Playfair Display", serif;
+
+@mixin mobile {
+  @media screen and (max-width: 375px) {
+    @content;
+  }
+}
+
+/* 輪播牆 */
+@media screen and (min-width: 376px) {
+  // .home_videoBox {
+  //   width: calc(100vw - calc(100vw - 100%));
+  //   height: 100vh;
+  //   background-color: $ning-color4;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   text-align: center;
+  //   position: relative;
+
+  //   video {
+  //     width: 100%;
+  //     height: 100%;
+  //     object-fit: cover;
+  //   }
+
+  //   img {
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     width: 100%;
+  //     height: 100%;
+  //     object-fit: cover;
+  //     user-select: none;
+  //     filter: invert(1);
+  //     mix-blend-mode: multiply;
+  //   }
+
+  //   .WJtitle {
+  //     position: absolute;
+  //     font-family: $ning-englishont;
+  //     font-size: 12rem;
+  //     font-weight: 900;
+  //     color:$ning-color3;
+  //     text-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+  //   }
+  // }
+
+  //------ 影片
+
+  // .ning_homeslider {
+  //   position: relative;
+  //   width: calc(100vw - calc(100vw - 100%));
+  //   height: 60vw;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   overflow: hidden;
+  //   object-fit: cover;
+  // }
+
+  // .ning_homecarouselimg {
+  //   width: calc(100vw - calc(100vw - 100%));
+  // }
+
+  // .ning_homecarousellefticon {
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 50px;
+  //   font-size: 3rem;
+  //   color: $ning-color4;
+  //   z-index: 10;
+  //   cursor: pointer; //鼠標改變
+  //   user-select: none;
+  // }
+
+  // .ning_homecarouselrighticon {
+  //   position: absolute;
+  //   top: 50%;
+  //   right: 50px;
+  //   font-size: 3rem;
+  //   color: $ning-color4;
+  //   z-index: 10;
+  //   cursor: pointer;
+  //   user-select: none;
+  // }
+
+  // .ning_homecarouseldot {
+  //   width: 20px;
+  //   height: 20px;
+  //   border-radius: 50%;
+  //   border: 1px solid $ning-color3;
+  //   margin: 0 10px;
+  // }
+
+  // .ning_homecarouseldots {
+  //   position: absolute;
+  //   bottom: 10%;
+  //   display: flex;
+  // }
+
+  // --------
+
+  // .ning_homecarouselwrapimg li img {
+  //   width: calc(100vw - calc(100vw - 100%));
+  //   object-fit: cover;
+  // }
+
+  // .ning_homecarouselwrap {
+  //   padding-top: 60px;
+  //   width: calc(100vw - calc(100vw - 100%));
+  //   height: 50vw;
+  //   overflow: hidden;
+  // }
+
+  // .ning_homecarouselwrapimg {
+  //   display: flex;
+  //   width: 300vw;
+  // }
+
+  //
+
+  .carousel {
+    width: calc(100vw - calc(100vw - 100%));
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    .ning_main_carousel {
+      width: calc(100vw - calc(100vw - 100%));
+      object-fit: cover;
+    }
+  }
+
+  .ning_imgwrap {
+    width: calc(500vw - calc(500vw - 500%));
+    display: flex;
+  }
+
+  .ning_li {
+    width: calc(100vw - calc(100vw - 100%));
+  }
+
+  .ning_img {
+    width: calc(100vw - calc(100vw - 100%));
+  }
+
+  // .welcome {
+  //   width: 50%;
+  //   position: absolute;
+  //   bottom: 20vh;
+  //   left: 0;
+  //   text-align: center;
+  //   h1 {
+  //     font-size: 8rem;
+  //     font-weight: 900;
+  //     color: transparent;
+  //     -webkit-text-stroke: 2px $ning-color3;
+  //     background: url(../../../public/img/home/carousel/back.png);
+  //     -webkit-background-clip: text;
+  //     background-position: 0 0;
+  //     animation: back 20s linear infinite;
+  //   }
+
+  //   @keyframes back {
+  //     100% {
+  //       background-position: 2000px 0;
+  //     }
+  //   }
+
+  //   h2 {
+  //     font-size: 3rem;
+  //     font-weight: 700;
+  //     color: $ning-color3;
+  //   }
+  // }
+
+
+  //apple版
+  
+  .zooDetail {
+    width: 48%;
+    height: 18vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(86, 86, 86, 0.3);
+    backdrop-filter: blur(10px);
+  }
+
+
+  // .zooDetail {
+  //   width: 42%;
+  //   height: 15vh;
+  //   position: absolute;
+  //   bottom: 0;
+  //   left: 0;
+  //   background-color: rgba(86, 86, 86, 0.3);
+  //   backdrop-filter: blur(10px);
+  // }
+
+  .info {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    //apple版
+    // justify-content: space-around;
+    justify-content: space-evenly;
+  }
+
+  .zooslider {
+    width: 44%;
+    //apple版
+    height: 18vh;
+    // height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    //apple版
+    // right: 5%;
+    right: 8%;
+    bottom: 0;
+    span {
+      width: 12%;
+      color: $ning-color3;
+      font-size: 2rem;
+      cursor: pointer;
+      text-align: center;
+    }
+  }
+
+  .preview {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    img {
+      width: 16%;
+      opacity: 0.5;
+    }
+    .active {
+      width: 23%;
+      border: 2px solid $ning-color3;
+      opacity: 1;
+    }
+  }
+
+  /* 園區資訊box */
+
+  .ning_informationbox_mb {
+    display: none;
+  }
+
+  .ning_informationbox {
+    position: relative;
+  }
+  .ning_information {
+    width: 55vw;
+    height: 120px;
+    background-color: #555;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    top: -60px;
+    overflow: hidden;
+  }
+
+  .ning_Admissionbox,
+  .ning_weatherbox,
+  .ning_ticketbox {
+    display: flex;
+  }
+
+  .ning_AdmissionboxIcon,
+  .ning_weatherboxIcon,
+  .ning_ticketboxIcon {
+    position: relative;
+    text-align: center;
+  }
+
+  .ning_iconsbox {
+    height: 3.5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+
+  .peopleicon,
+  .ticketicon {
+    color: $ning-color3;
+    font-size: 5rem;
+    padding-left: 1.5px;
+  }
+
+  .weathericon {
+    width: 50px;
+    height: 50px;
+
+    svg {
+      width: 90%;
+      stroke: $ning-color3;
+    }
+  }
+
+  .ning_Admission,
+  .ning_weather,
+  .ning_ticket {
+    font-family: $ning-chinesefont;
+    color: $ning-color3;
+    font-size: 1.3rem;
+    margin: 0;
+  }
+
+  .ning_AdmissionEn,
+  .ning_weatherEn,
+  .ning_ticketEn {
+    font-family: $ning-englishont;
+    color: $ning-color3;
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .ning_AdmissionCout,
+  .ning_weatherCout,
+  .ning_ticketwrap {
+    display: flex;
+    align-items: center;
+  }
+
+  .ning_AdmissionNumber,
+  .ning_weatherNumber {
+    font-family: $ning-chinesefont;
+    color: $ning-color3;
+    font-size: 4rem;
+    margin-left: 20px;
+  }
+
+  .ning_AdmissionUnit {
+    font-family: $ning-chinesefont;
+    color: $ning-color3;
+    font-size: 1.2rem;
+    margin-left: 3px;
+    margin-top: 30px;
+  }
+
+  .ning_separationline {
+    width: 1px;
+    height: 80px;
+    background-color: #ffffff6b;
+  }
+
+  .ning_weathericon,
+  .ning_ticketicon {
+    height: 4rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+
+  .ning_weatherUnit {
+    font-family: $ning-chinesefont;
+    color: $ning-color3;
+    font-size: 1.2rem;
+    margin-left: 3px;
+  }
+
+  .ning_aldult,
+  .ning_student,
+  .ning_love {
+    color: $ning-color3;
+    font-family: $ning-chinesefont;
+    font-size: 1.5rem;
+  }
+
+  .ning_aldultprice,
+  .ning_studentprice,
+  .ning_loveprice {
+    color: $ning-color3;
+    font-family: $ning-chinesefont;
+    font-size: 2.5rem;
+    margin-bottom: 0;
+  }
+
+  .ning_aldultbox,
+  .ning_studentbox,
+  .ning_lovebox {
+    text-align: center;
+    margin-left: 20px;
+  }
+
+  /* JungleTour 園區導覽 */
+
+  .ning_bgcblack {
+    background: url("../../../public/img/home/homebgcblack.svg") no-repeat;
+    //apple版
+    width: 100%;
+    // height: 110vh;
+    
+    background-size: cover;
+    background-position: bottom;
+  }
+
+  .ning_TitleEn {
+    font-size: 4.5rem;
+    font-weight: 600;
+    color: $ning-color3;
+    padding-top: 100px;
+  }
+
+  .ning_TitleCh {
+    font-family: $ning-chinesefont;
+    font-size: 2.3rem;
+    font-weight: 400;
+    color: $ning-color3;
+    margin-top: 20px;
+  }
+
+  .ning_JungleTourmapbox {
+    //apple版
+    // height: 110vh;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 30px 180px 0 180px;
+  }
+
+  .ning_Jungletourimgbox {
+    display: flex;
+    //apple版
+    // width: 65%;
+    width: 60%;
+  }
+
+  .ning_tourboxhd {
+    width: 100%;
+    height: 420px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  // .ning_tourboxhd img {
+  //   height: 100%;
+  // }
+
+  .ning_JungleTourmap {
+    width: 35%;
+    margin-top: 80px;
+    margin-bottom: 250px;
+  }
+
+  .ning_Jungletourimgbox p {
+    color: $ning-color3;
+    font-family: $ning-chinesefont;
+    font-size: 1.5rem;
+    margin-top: 15px;
+  }
+
+  // .ning_Jungle {
+  //   width: 70%;
+  //   display: flex;
+  //   //apple版
+  // }
+
+  .ning_Jungletropical {
+    //apple版
+    // width: 20%;
+    width: 25%;
+    margin-top: 70px;
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  .ning_Jungletropicalimg {
+    position: absolute;
+    left: -180px;
+    height: 100%;
+  }
+
+  .ning_JungleOcean {
+    //apple版
+    // width: 20%;
+    width: 25%;
+    margin-top: 140px;
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  .ning_JungleOceanimg {
+    position: absolute;
+    left: -300px;
+    // height: 100%;
+    height: 420px;
+  }
+
+  .ning_Junglenocturnal {
+    //apple版
+    // width: 20%;
+    width: 25%;
+    margin-top: 70px;
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  .ning_Junglenocturnalimg {
+    position: absolute;
+    left: -300px;
+    height: 100%;
+  }
+
+  .ning_Jungleice {
+    //apple版
+    // width: 20%;
+    width: 25%;
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  .ning_Jungleiceimg {
+    position: absolute;
+    left: -430px;
+    height: 100%;
+  }
+
+  /* hover 效果 */
+
+  .ning_Jungletropical:hover {
+    margin-top: 50px;
+    opacity: 1;
+  }
+
+  .ning_JungleOcean:hover {
+    margin-top: 120px;
+    opacity: 1;
+  }
+
+  .ning_Junglenocturnal:hover {
+    margin-top: 50px;
+    opacity: 1;
+  }
+
+  .ning_Jungleice:hover {
+    margin-top: -20px;
+    opacity: 1;
+  }
+
+  /* 釘選購票、紅利遊戲 */
+  .ning_buyticketBox {
+    display: flex;
+    position: fixed;
+    z-index: 8888;
+    top: 150px;
+    right: -250px;
+    transition: 0.5s;
+  }
+
+  .ning_buyticket {
+    background-color: $ning-color2;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    margin-left: -5px;
+    padding-top: 5px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+    border: 2px solid $ning-color3;
+    cursor: pointer;
+  }
+
+  .ning_game {
+    background-color: $ning-color2;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    margin-left: -5px;
+    padding-top: 5px;
+    //margin-top: 90px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+    border: 2px solid $ning-color3;
+    cursor: pointer;
+  }
+
+  .ning_buyticketicon p,
+  .ning_gameicon p {
+    font-family: $ning-chinesefont;
+    color: $ning-color3;
+    font-size: 1rem;
+    margin-top: -5px;
+  }
+
+  .ning_buyticketicon span,
+  .ning_gameicon span {
+    color: $ning-color3;
+    font-size: 3.5rem;
+    padding-left: 1.5px;
+  }
+
+  .ning_rightflex {
+    position: fixed;
+    z-index: 8888;
+    top: 250px;
+    right: 0px;
+  }
+
+  .ticketForm {
+    width: 250px;
+    height: 400px;
+    background-color: $ning-color3;
+    h2 {
+      text-align: center;
+      font-family: $ning-chinesefont;
+      color: $ning-color3;
+      background-color: $ning-color4;
+      font-size: 1.8rem;
+      line-height: 5rem;
+      margin-bottom: 20px;
+    }
+
+    h4 {
+      font-size: 1.5rem;
+      font-family: $ning-chinesefont;
+      color: $ning-color4;
+    }
+
+    .AdultTicketvalue,
+    .studentTicketvalue,
+    .loveTicketvalue {
+      width: 60px;
+      height: 40px;
+      border: 1px solid $ning-color4;
+      border-radius: 0%;
+      font-size: 1.5rem;
+      font-family: $ning-chinesefont;
+      text-align: center;
+    }
+
+    .addBtn,
+    .redBtn {
+      width: 40px;
+      height: 40px;
+      border-radius: 0%;
+      background-color: $ning-color4;
+    }
+
+    i {
+      color: $ning-color3;
+    }
+
+    .AdultTicket,
+    .studentTicket,
+    .loveTicket {
+      display: flex;
+      align-items: center;
+    }
+
+    .AdultTicketBtn,
+    .studentTicketBtn,
+    .loveTicketBtn {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+  }
+
+  .ticketType {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .goPay {
+    width: 200px;
+    height: 40px;
+    background-color: $ning-color2;
+    color: $ning-color3;
+    border-radius: 0%;
+    font-family: $ning-chinesefont;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  /* Popular Events 熱門活動 */
+
+  .ning_PopularEvents {
+    margin-top: -150px;
+  }
+
+  .ning_TitleEnblack {
+    font-size: 4.5rem;
+    font-weight: 600;
+    color: $ning-color4;
+    padding-top: 160px;
+  }
+
+  .ning_TitleChblack {
+    font-family: $ning-chinesefont;
+    font-size: 2.3rem;
+    font-weight: 400;
+    color: $ning-color4;
+    margin-top: 20px;
+  }
+
+  .ning_eventContainer {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .ning_eventWrap {
+    width: 400%;
+    animation: carousel 50s linear infinite;
+    white-space: nowrap;
+    will-change: transform;
+
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
+
+  @keyframes carousel {
+    0% {
+      transform: translateX(0);
+    }
+
+    50% {
+      transform: translateX(-50%);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .ning_eventsbox {
+    padding: 10px 20px;
+    margin-top: 50px;
+    cursor: pointer;
+  }
+
+  .ning_eventsday {
+    color: $ning-color4;
+    font-family: $ning-chinesefont;
+    font-size: 2.2rem;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .ning_eventsyear {
+    color: $ning-color4;
+    font-family: $ning-chinesefont;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .ning_eventsdateline {
+    width: 100px;
+    height: 1.3px;
+    background-color: $ning-color4;
+    margin: 2px 0;
+  }
+
+  .ning_eventstour {
+    color: $ning-color4;
+    font-family: $ning-chinesefont;
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  .ning_eventsimg {
+    width: 300px;
+    height: 180px;
+    margin-top: 15px;
+    overflow: hidden;
+  }
+
+  .ning_eventsimg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    -webkit-filter: grayscale(70%); /* Safari */
+    filter: grayscale(70%);
+  }
+
+  .ning_eventsboxbottom {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .ning_eventstext {
+    width: 80%;
+    font-family: $ning-chinesefont;
+    color: $ning-color4;
+    font-size: 1.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  .ning_eventsgo {
+    border-top: 1.2px solid $ning-color4;
+  }
+
+  .ning_eventsgo span {
+    color: $ning-color4;
+    font-size: 1.6rem;
+    padding: 6px 12px;
+  }
+
+  .ning_buttonbox {
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .ning_viewmorebtn {
+    background-color: $ning-color4;
+    border-radius: 0%;
+    display: flex;
+    width: 315px;
+    height: 50px;
+    align-items: center;
+    padding: 5px 40px;
+    justify-content: space-between;
+  }
+
+  .ning_viewmorebtntext {
+    font-family: $ning-englishont;
+    color: $ning-color3;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .ning_viewmorebtn:hover {
+    background-color: $ning-color2;
+    .ning_viewmorebtntext,
+    .ning_viewmoreicon {
+      color: $ning-color4;
+    }
+  }
+
+  .ning_viewmoreicon {
+    color: $ning-color3;
+    font-size: 2rem;
+    font-weight: 200;
+    margin: 0;
+  }
+
+  /* Popular Events 熱門活動 hover */
+
+  .ning_eventsbox:hover {
+    border: 1px solid $ning-color4;
+    padding: 10px 0px 10px 20px;
+    margin-top: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.212);
+
+    // .ning_eventsday {
+    //   color: $ning-color3;
+    // }
+
+    // .ning_eventsyear {
+    //   color: $ning-color3;
+    // }
+
+    // .ning_eventsdateline {
+    //   background-color: $ning-color3;
+    // }
+
+    // .ning_eventstour {
+    //   color: $ning-color3;
+    // }
+    .ning_eventsimg img {
+      -webkit-filter: grayscale(0%); /* Safari */
+      filter: grayscale(0%);
+    }
+
+    // .ning_eventstext {
+    //   color: $ning-color3;
+    // }
+
+    // .ning_eventsgo {
+    //   border-top: 1.2px solid $ning-color3;
+    // }
+
+    // .ning_eventsgo span {
+    //   color: $ning-color3;
+    // }
+  }
+
+  /* Accommodation 風格住宿 */
+
+  .ning_Accommodation {
+    margin-top: -60px;
+    margin-bottom: 60px;
+  }
+
+  .ning_Accommodationbox {
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .ning_carousel {
+    height: 420px;
+    width: 100%;
+    .ning_card-container {
+      height: 400px;
+      position: relative;
+      overflow: hidden;
+      .ning_card {
+        height: 100%;
+        width: 50%;
+        transition: all 1s;
+        position: absolute;
+        opacity: 0.8;
+        transform: scale(0.8);
+        z-index: 2;
+        cursor: pointer;
+        user-select: none;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+        p {
+          margin: 0;
+          position: absolute;
+          bottom: 5px;
+          right: 15px;
+          color: $ning-color3;
+          font-size: 4rem;
+          font-family: $ning-englishont;
+        }
+      }
+    }
+
+    // .ning_rects {
+    //   height: 20px;
+    //   display: flex;
+    //   justify-content: center;
+    //   align-items: center;
+    //   .ning_rect {
+    //     height: 2px;
+    //     width: 20px;
+    //     background-color: #ddd;
+    //     margin-right: 8px;
+    //     cursor: pointer;
+    //   }
+    //   .active {
+    //   background-color: #c62f2f;
+    // }
+    // }
+  }
+
+  /* Jungle star 明星動物認養 */
+
+  .ning_Junglestarcontainer {
+    margin-top: 7%;
+    width: 100%;
+    height: 25vw;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .ning_eaglecardbox {
+    width: 50%;
+    overflow: hidden;
+    transition: 1s;
+    cursor: pointer;
+  }
+
+  .ning_eaglecard {
+    width: 560px;
+    height: 25vw;
+    background-color: $ning-color5;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 10px;
+
+    div {
+      width: 40%;
+
+      h3 {
+        font-family: $ning-englishont;
+        font-size: 3.5rem;
+        color: $ning-color3;
+      }
+
+      span {
+        font-family: $ning-chinesefont;
+        font-size: 1.2rem;
+        color: $ning-color3;
+        word-wrap: normal;
+        white-space: pre-wrap;
+      }
+
+      button {
+        font-family: $ning-chinesefont;
+        color: $ning-color3;
+        font-size: 1.5rem;
+        background-color: $ning-color4;
+        border-radius: 0;
+        width: 96%;
+        height: 50px;
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .star_img {
+    filter: grayscale(100%);
+  }
+
+  .ning_eagleimg {
+    width: 60%;
+    height: 100%;
+    transition: 1s;
+    // margin-left: -100px;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .ning_elephantcardbox {
+    width: 12.5%;
+    overflow: hidden;
+    transition: 1s;
+    cursor: pointer;
+  }
+
+  .ning_elephantcard {
+    width: 560px;
+    height: 25vw;
+    background-color: $ning-color1;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 10px;
+
+    div {
+      width: 40%;
+      h3 {
+        font-family: $ning-englishont;
+        font-size: 3.5rem;
+        color: $ning-color3;
+      }
+
+      span {
+        font-family: $ning-chinesefont;
+        font-size: 1.2rem;
+        color: $ning-color3;
+        word-wrap: normal;
+        white-space: pre-wrap;
+      }
+
+      button {
+        font-family: $ning-chinesefont;
+        color: $ning-color3;
+        font-size: 1.5rem;
+        background-color: $ning-color4;
+        border-radius: 0;
+        width: 96%;
+        height: 50px;
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .ning_elephantimg {
+    width: 60%;
+    height: 100%;
+    transition: 1s;
+    //apple版
+    margin-left: -100px;
+    // margin-left: -150px;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .ning_tigercardbox {
+    width: 12.5%;
+    overflow: hidden;
+    transition: 1s;
+    cursor: pointer;
+  }
+
+  .ning_tigercard {
+    width: 560px;
+    height: 25vw;
+    background-color: $ning-color2;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 10px;
+    overflow: hidden;
+
+    div {
+      width: 40%;
+
+      h3 {
+        font-family: $ning-englishont;
+        font-size: 3.5rem;
+        color: $ning-color3;
+      }
+
+      span {
+        font-family: $ning-chinesefont;
+        font-size: 1.2rem;
+        color: $ning-color3;
+        word-wrap: normal;
+        white-space: pre-wrap;
+      }
+
+      button {
+        font-family: $ning-chinesefont;
+        color: $ning-color3;
+        font-size: 1.5rem;
+        background-color: $ning-color4;
+        border-radius: 0;
+        width: 96%;
+        height: 50px;
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .ning_tigerimg {
+    width: 60%;
+    height: 100%;
+    transition: 1s;
+    //apple版
+    margin-left: -90px;
+    // margin-left: -140px;
+
+    img {
+      //apple版
+      height: 120%;
+      // height: 130%;
+    }
+  }
+
+  .ning_sharkcardbox {
+    width: 12.5%;
+    overflow: hidden;
+    transition: 1s;
+    cursor: pointer;
+  }
+
+  .ning_sharkcard {
+    width: 560px;
+    height: 25vw;
+    background-color: $ning-color4;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 2%;
+    overflow: hidden;
+
+    div {
+      width: 40%;
+
+      h3 {
+        font-family: $ning-englishont;
+        font-size: 3.5rem;
+        color: $ning-color3;
+      }
+
+      span {
+        font-family: $ning-chinesefont;
+        font-size: 1.2rem;
+        color: $ning-color3;
+        word-wrap: normal;
+        white-space: pre-wrap;
+      }
+
+      button {
+        font-family: $ning-chinesefont;
+        color: $ning-color4;
+        font-size: 1.5rem;
+        background-color: $ning-color3;
+        border-radius: 0;
+        width: 96%;
+        height: 50px;
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .ning_sharkimg {
+    width: 60%;
+    height: 100%;
+    transition: 1s;
+    //apple版
+    margin-left: -200px;
+    // margin-left: -280px;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .ning_hitefoxcardbox {
+    width: 12.5%;
+    overflow: hidden;
+    transition: 1s;
+    cursor: pointer;
+  }
+
+  .ning_hitefoxcard {
+    width: 560px;
+    height: 25vw;
+    background-color: #1297cf;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 2%;
+    overflow: hidden;
+
+    div {
+      width: 40%;
+
+      h3 {
+        font-family: $ning-englishont;
+        font-size: 3.5rem;
+        color: $ning-color4;
+      }
+
+      span {
+        font-family: $ning-chinesefont;
+        font-size: 1.2rem;
+        color: $ning-color4;
+        word-wrap: normal;
+        white-space: pre-wrap;
+      }
+
+      button {
+        font-family: $ning-chinesefont;
+        color: $ning-color3;
+        font-size: 1.5rem;
+        background-color: $ning-color4;
+        border-radius: 0;
+        width: 96%;
+        height: 50px;
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .ning_hitefoximg {
+    width: 60%;
+    height: 100%;
+    transition: 1s;
+    margin-left: -40px;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  /* */
+
+  .ning_eaglecard button:hover,
+  .ning_elephantcard button:hover,
+  .ning_sharkcard button:hover,
+  .ning_hitefoxcard button:hover {
+    background-color: $ning-color2;
+  }
+
+  .ning_tigercard button:hover {
+    background-color: $ning-color3;
+  }
+
+  /* 相關商品 */
+
+  .ning_starproducts {
+    font-size: 2rem;
+    color: $ning-color4;
+    font-family: $ning-chinesefont;
+    font-weight: 400;
+    padding: 2% 0;
+  }
+
+  .ning_starproducthiddenbox {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .ning_starproductwrap {
+    width: 200%;
+    display: flex;
+    justify-content: space-evenly;
+    transition: 0.5s;
+    transform: translateX(0px);
+  }
+
+  .ning_starproductimg {
+    width: 20%;
+    //apple版
+    height: 15vw;
+    // height: 12vw;
+    overflow: hidden;
+    cursor: pointer;
+    border: 4px solid $ning-color3;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 0.5s ease;
+    }
+  }
+
+  .ning_productText {
+    text-align: center;
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    background-color: rgba(85, 85, 85, 0.726);
+    font-family: $ning-chinesefont;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    bottom: -50%;
+    transition: 0.6s;
+  }
+
+  .ning_productname {
+    p {
+      font-size: 2rem;
+      color: $ning-color3;
+      margin: 5px;
+      span {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .ning_starproductimg:hover {
+    img {
+      transform: scale(1.2);
+    }
+  }
+
+  .ning_starproductbox {
+    position: relative;
+  }
+
+  .ning_starcarousellefticon {
+    font-size: 4rem;
+    color: $ning-color4;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -5%;
+    cursor: pointer;
+  }
+
+  .ning_starcarouselrighticon {
+    font-size: 4rem;
+    color: $ning-color4;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -5%;
+    cursor: pointer;
+  }
+
+  /* Transportion 交通 */
+
+  .ning_transportionButton {
+    margin: 50px 0;
+  }
+
+  .ning_busButton {
+    font-family: $ning-chinesefont;
+    color: $ning-color3;
+    font-size: 1.5rem;
+    background-color: $ning-color2;
+    border-radius: 0;
+    width: 200px;
+    height: 50px;
+  }
+
+  .ning_PButton {
+    font-family: $ning-chinesefont;
+    color: $ning-color3;
+    font-size: 1.5rem;
+    background-color: $ning-color4;
+    border-radius: 0;
+    width: 200px;
+    height: 50px;
+    margin-left: 20px;
+  }
+
+  .selectBusBox {
+    margin-top: 30px;
+  }
+
+  .selectBus {
+    width: 30%;
+    height: 50px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: $ning-chinesefont;
+    color: #777;
+    border-radius: 0px;
+    appearance: none;
+    background: url(../../../public/img/lodging/selectIcon.svg) 100% / 15%
+      no-repeat;
+    border: 1px solid $ning-color4;
+    outline: 0;
+  }
+
+  .selectBus:hover {
+    border-color: $ning-color2;
+    box-shadow: 0 0 0 #ffffff00;
+  }
+
+  .ning_busstopname {
+    color: $ning-color1;
+    font-size: 2rem;
+    font-family: $ning-chinesefont;
+    margin: 2% 0;
+  }
+
+  .ning_smallbusname {
+    color: $ning-color1;
+    font-size: 2rem;
+    font-family: $ning-chinesefont;
+    margin-bottom: 5px;
+  }
+
+  .ning_no {
+    color: #ffffff;
+    height: 2rem;
+    margin-bottom: 5px;
+  }
+
+  .ning_busbox {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+  }
+
+  .ning_Pbox {
+    width: 45%;
+  }
+
+  .ning_PTotalBox {
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+    p {
+      width: 30%;
+      font-size: 1.6rem;
+      font-family: $ning-chinesefont;
+    }
+
+    span {
+      width: 70%;
+      font-size: 1.8rem;
+      font-family: $ning-chinesefont;
+      white-space: pre-wrap;
+    }
+  }
+
+  .ning_PAvailablecar {
+    color: $ning-color1;
+  }
+
+  .ning_bus {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+  }
+
+  .ning_smallbusInfo {
+    width: 50%;
+    height: 500px;
+    overflow-y: scroll;
+  }
+
+  .ning_bustime {
+    width: 45%;
+    height: 60px;
+    border: 2px solid $ning-color4;
+    border-radius: 30px;
+    font-size: 2rem;
+    font-family: $ning-chinesefont;
+    text-align: center;
+    line-height: 60px;
+    span {
+      font-size: 1.6rem;
+    }
+  }
+
+  .ning_busname {
+    width: 45%;
+    font-family: $ning-chinesefont;
+    font-size: 1.8rem;
+    cursor: pointer;
+    span {
+      font-size: 1.2rem;
+      color: #777;
+    }
+  }
+  .ning_busname:hover {
+    color: $ning-color1;
+  }
+
+  .ning_busmap {
+    width: 50%;
+    height: 500px;
+    overflow: hidden;
+    object-fit: cover;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .ning_transportionbox {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  //公車路線細節
+
+  .ning_smallbusBox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  .ning_smallbusGo {
+    width: 48%;
+    h4 {
+      font-family: $ning-chinesefont;
+      font-size: 1.6rem;
+      color: #777;
+    }
+  }
+
+  .ning_smallbusBack {
+    width: 48%;
+    h4 {
+      font-family: $ning-chinesefont;
+      font-size: 1.6rem;
+      color: #777;
+    }
+  }
+
+  .businfoClose {
+    color: $ning-color4;
+    position: absolute;
+    right: 20px;
+    top: 0;
+    cursor: pointer;
+  }
+
+  .businfoClose:hover {
+    color: $ning-color2;
+  }
+
+  .ning_smallbusStop {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .pulsing {
+    content: "";
+    display: inline-block;
+    margin-right: 10px;
+    width: 12px;
+    height: 12px;
+    border: 1px solid $ning-color4;
+    border-radius: 100%;
+  }
+
+  .pulsing-animation::before {
+    content: "";
+    display: inline-block;
+    margin-right: 10px;
+    width: 12px;
+    height: 12px;
+    background: $ning-color1;
+    border-radius: 100%;
+    -webkit-animation: pulsing-animation 1s ease-in infinite;
+    animation: pulsing-animation 1s ease-in infinite;
+  }
+  @keyframes pulsing-animation {
+    0% {
+      box-shadow: 0 0 0 0 $ning-color1;
+    }
+    100% {
+      box-shadow: 0 0 0 14px rgba(235, 86, 60, 0);
+    }
+  }
+
+  .ning_smallbusStopname {
+    font-family: $ning-chinesefont;
+    font-size: 1.2rem;
+    line-height: 40px;
+    margin-right: 5px;
+    margin-bottom: 0;
+  }
+
+  .ning_smallbusStopTime {
+    font-family: $ning-chinesefont;
+    font-size: 1.2rem;
+    border: 1px solid $ning-color4;
+    padding: 0 10px;
+    line-height: 40px;
+    border-radius: 20px;
+    margin-bottom: 0;
+  }
+
+  .ning_smallbusStop {
+    display: flex;
+    margin: 10px 0;
+  }
+}

@@ -1,0 +1,635 @@
+.chatbot_logo{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 1px solid rgb(201, 194, 194);
+    background-color: rgb(235, 91, 55);
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1000;
+}
+.chatbot_logo img{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-55%);
+}
+.chatbot_wrap{
+    width: 450px;
+    height: 700px;
+    /* border: 1px solid black; */
+    background: rgb(249,177,18);
+    position: fixed;
+    right: 80px;
+    bottom: 30px;
+    box-shadow: 0 0 10px 0 rgb(153, 151, 151);
+    z-index: 1010;
+    overflow: hidden;
+}
+.chatbot_nav{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 45px;
+    background-color: black;
+    text-align: right;
+    line-height: 45px;
+}
+.chatbot_nav .name{
+    color: white;
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.15rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.chatbot_close{
+    color: white;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+.chat_area{
+    width: 100%;
+    height: 605px;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+/* 機器人回話的區域(靠左) */
+.chatbot_reply{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1.5rem 1rem;
+    position: relative;
+}
+.chatbot_avatar{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: coral;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.chatbot_avatar img{
+    width: 80%;
+    height: auto;
+}
+.chatbot_message{
+    width: 300px;
+    background-color: white;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    font-weight: 600;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    padding: 10px 16px;
+    margin-top: 1rem;
+    /* margin-bottom: 2rem; */
+    position: relative;
+    word-wrap: normal;
+    white-space: pre-wrap;
+}
+.chatbot_message::before{
+    content: "";
+    display: block;
+    width: 0px; 
+    position: absolute;
+    top: 0px;
+    left: -20px;
+    border-width: 10px 20px 10px 0px;
+    border-color: transparent rgb(255, 255, 255) transparent;
+    border-style:solid;
+}
+.chatbot_time{
+    /* width: 10%; */
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 0.75rem;
+    color: white;
+    margin-left: 5rem;
+    margin-top: 0.5rem;
+}
+/* 使用者回話的區域(靠右) */
+.user_reply{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin: 1.5rem 1rem;
+}
+.user_avatar{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(88, 105, 105);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.user_avatar i{
+    font-size: 2.5rem;
+    color: white;
+}
+.user_message{
+    width: 300px;
+    background-color: white;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    font-weight: 600;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    padding: 10px 16px;
+    margin-top: 1rem;
+    /* margin-bottom: 2rem; */
+    position: relative;
+    word-wrap: normal;
+    white-space: pre-wrap;
+}
+.user_message::before{
+    content: "";
+    display: block;
+    width: 0px; 
+    position: absolute;
+    top: 0;
+    left: 300px;
+    border-width: 10px 0px 10px 20px;
+    border-color: transparent rgb(255, 255, 255) transparent;
+    border-style:solid;
+}
+.user_time{
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 0.75rem;
+    color: white;
+    margin-right: 5rem;
+    margin-top: 0.5rem;
+}
+.reply_hint{
+    width: 100px;
+    height: 40px;
+    font-size: 3.5rem;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-family: sans-serif;
+    letter-spacing: 0.8rem;
+    padding-left: 10px;
+    position: absolute;
+    left: 2rem;
+    bottom: 80px;
+    border-radius: 30px;
+    line-height: 25px;
+    text-align: center;
+}
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    /* height: 400px; */
+    position: absolute;
+    bottom: -200px;
+    transition: 1s;
+}
+.menu div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    font-size: 1.25rem;
+    text-align: center;  
+    cursor: pointer;
+}
+.menu .book{
+    width: 33.3%;
+    height: 100px;
+    background-color: rgb(27,119,84);
+}
+.menu .coupon{ 
+    width: 33.3%;
+    height: 100px;
+    background-color: rgb(11,156,101);
+}
+.coupon_link:hover{
+    text-decoration: none;
+}
+.menu .adopt{  
+    width: 33.3%;
+    height: 100px;
+    background-color: rgb(27,119,84);
+}
+.adopt_link:hover{
+    text-decoration: none;
+}
+.menu .profile{   
+    width: 33.3%;
+    height: 100px;
+    background-color: rgb(11,156,101);
+}
+.profile_link:hover{
+    text-decoration: none;
+}
+.menu .weather{
+    width: 33.3%;
+    height: 100px;
+    background-color: rgb(27,119,84);
+}
+.menu .phone{   
+    width: 33.3%;
+    height: 100px;
+    background-color: rgb(11,156,101);
+}
+.icon i{
+    padding-bottom: 10px;
+    font-size: 3rem ;   
+}
+.tool_bar{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background: rgb(235,92,55);
+    position: absolute;
+    bottom: 0;
+    line-height: 50px;
+}
+.robot_input {   
+    width: 350px;
+    height: 35px;
+    border: none;
+    font-size: 1.25rem;
+    font-family: sans-serif;
+    padding-left: 15px;
+    font-weight: 600;
+    text-align: start;
+    /* letter-spacing: 0.25rem; */
+}
+.robot_input:focus{
+    box-shadow: 0 0 5px 0 rgb(0, 204, 255),
+                0 0 8px 0 rgb(0, 217, 255),
+                0 0 10px 0 rgb(0, 217, 255);
+}
+.robot_input:focus-visible{
+    outline: none;
+}
+
+.rich_menu{  
+    width: 30px;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-align: center;
+}
+.send{
+    width: 30px;
+    padding: 0;
+    padding-left: 0.7rem;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    /* margin-left: 0.7rem; */
+}
+/* 下方是天氣的css */
+.weather_carousel {
+    width: 1500px;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding-left: 3rem;
+    font-family: sans-serif;
+    position: relative;
+    transition: 0.7s;
+    margin-left: 2rem;
+}
+.weather_card {
+    border-radius: 10px;
+    width: 200px;
+    height: 250px;
+    background-color: rgb(17, 82, 102);
+    margin-right: 1.5rem;
+}
+.weather_date{
+    color: white;
+    margin: 10px;
+    text-align: center;
+    font-size: 2rem;
+}
+.weather_icon{
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    padding-top: 10px;
+    position: relative;
+}
+.weather_icon img{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.weather_row{
+    display: flex;
+    margin-top: 20px;
+}
+.weather_rain{
+    color: white;
+    width: 50%;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.weather_temp{
+    color: white;
+    width: 50%;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.chatbot_toLeft{
+    position: absolute;
+    width: 45px;
+    height: 250px;
+    left: -10px;
+    top: 50px;
+    text-align: center;
+    line-height: 250px;
+    cursor: pointer;
+}
+.chatbot_toLeft i{
+    font-size: 3rem;
+    color: rgba(255, 255, 255);
+}
+.chatbot_toRight{
+    position: absolute;
+    width: 45px;
+    height: 250px;
+    right: -10px;
+    top: 50px;
+    text-align: center;
+    line-height: 250px;
+    cursor: pointer;
+}
+.chatbot_toRight i{
+    font-size: 3rem;
+    color: rgba(255, 255, 255);
+}
+/* 以下是貼圖部分 */
+.sticker_message{
+        width: 235px;
+        /* height: 170px; */
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        padding: 10px 16px;
+        margin-top: 1rem;
+        /* margin-bottom: 2rem; */
+        position: relative;
+}
+.sticker_message img{
+    width: 100%;
+    height: auto;
+}
+.stickers_menu{
+    background-color: rgb(175, 170, 170);
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    align-items: center;
+    bottom: -200px;
+    transition: 1s; 
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.stickers_menu div{
+    width: 30%;
+    height: 100px;
+    margin: 10px 0.6rem;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.stickers_menu div:hover{
+    overflow: visible;
+}
+.stickers_menu div img:hover{
+    transform: scale(1.15);
+    height: auto;
+}
+.stickers_menu div img{
+    width: 75%;
+    height: auto;
+}
+.sticker{
+    position: absolute;
+    top: 0;
+    right: 60px;
+    width: 20px;
+    height: 40px;
+    cursor: pointer;
+}
+.sticker img{
+    width: 100%;
+    height: auto;
+}
+/* 專人客服的部分 */
+.agent_introduce{
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: sans-serif;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    color: white;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.agent_chooseArea{
+    position: absolute;
+    top: 57px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.exit_agent{
+    width: 50px;
+    cursor: pointer;
+}
+.exit_agent i{
+    font-size:2rem;
+    color: white;
+}
+.service_agent{
+    top: 150px;
+    left: 30px;
+    width: 80px;
+    height: 80px;
+    /* border: 1px solid black; */
+}
+.agent_avatar{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: rgb(128, 124, 124);
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+/* 這是選擇用的比較大 */
+.agent_avatar img{
+    width: 95%;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-28%);
+}
+/* 這是對話內容的圖像比較小 */
+.agentAvatar_wrap{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgb(121, 121, 121);
+    overflow: hidden;
+    position: relative;
+}
+.agentAvatar_wrap .agentChat_avatar{
+    width: 65%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-40%);
+}
+.agent_connected{
+    /* position: absolute;
+    bottom: 0;
+    right: 0; */
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgb(70, 224, 50);
+    margin-top: -1rem;
+    margin-left: 70px;
+}
+/* 訂票用的卡片CSS */
+.chatbot_ticketsCard{
+    width: 250px;
+    height: 350px;
+    border-radius: 10px;
+    background-color: white;
+    margin-left: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+.chatbot_tCardTitle{
+    width: 100%;
+    height: 60px;
+    border-radius: 10px 10px 0 0;
+    background-color: rgb(235,92,55);
+    color: rgb(250, 250, 250);
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 60px;
+    font-family: sans-serif;
+    font-weight: 800;
+}
+.chatbot_ticketAdult{
+    width: 100%;
+    height: 79px;
+    border-bottom: 1px dashed rgb(119, 118, 118);
+    display: flex;
+    align-items: center;
+}
+.chatbot_ticketStudent{
+    width: 100%;
+    height: 79px;
+    border-bottom: 1px dashed rgb(119, 118, 118);
+    display: flex;
+    align-items: center;
+}
+.chatbot_ticketOld{
+    width: 100%;
+    height: 79px;
+    display: flex;
+    align-items: center;
+}
+.chatbot_ticketFor{
+    width: 25%;
+    font-size: 1.5rem;
+    font-weight: 800;
+    font-family: sans-serif;
+    color: gray;
+    text-align: center;
+    padding-left: 0.35rem;
+}
+.chatbot_ticketCountArea{
+    width: 66%;
+    display: flex;
+    margin-left: 1rem;
+}
+.chatbot_ticketMinus{
+    width: 40px;
+    height: 40px;
+    border: 1px solid gray;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+.chatbot_ticketMinus i{
+    font-size: 1.8rem;
+    color: gray;
+}
+.chatbot_ticketNum{
+    width: 80px;
+    height: 40px;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    text-align: center;
+    color: rgb(88, 81, 81);
+    font-size: 2rem;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+.chatbot_ticketAdd{
+    width: 40px;
+    height: 40px;
+    border: 1px solid gray;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+.chatbot_ticketAdd i{
+    font-size: 1.8rem;
+    color: gray;
+}
+.chatbot_ticketSend{
+    width: 100%;
+    height: 60px;
+    border-radius: 0 0 10px 10px;
+    background-color: rgb(19, 87, 126);
+    color: rgb(250, 250, 250);
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 60px;
+    font-family: sans-serif;
+    font-weight: 800;
+    cursor: pointer;
+}
+@media screen and (max-width:700px){
+    .chatbot_logo{
+        z-index: -1;
+        opacity:0;
+    }
+}

@@ -1,0 +1,371 @@
+.spot_container {
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: rgb(249,177,18);
+    margin-bottom: -400px;
+}
+.game_title{
+    padding-top: 2rem;
+    width: 100%;
+    font-size: 4rem;
+    color: black;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 50px;
+    font-family: sans-serif;
+}
+.game_profile{
+    margin-top: 2rem;
+    text-align: center; 
+    color: black;
+    line-height: 27px;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+}
+.game_profile span{
+    color: red;
+    
+    font-weight: 800;
+}
+.leaf_left{
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    top: 20px;
+    left: 0;
+}
+.cloud_left{
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    top: 205px;
+    left: 490px;
+}
+.cloud_left1{
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    top: 270px;
+    left: 250px;
+}
+.cloud_right{
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    top: 175px;
+    right: 350px;
+}
+.cloud_right1{
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    top: 265px;
+    right: 95px;
+}
+.leaf_left img{
+    width: 100%;
+    height: auto;
+}
+.leaf_right{
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    top: 20px;
+    right: 0;
+}
+.leaf_right img{
+    width: 100%;
+    height: auto;
+}
+.mc_container_game {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    width: calc(100% - 300px);
+    height: 800px;
+    margin: 40px auto;
+    background-color: rgb(26,97,13);
+    border-radius: 30px;
+}
+.mc_game_border{
+    width: 100%;
+    height: 800px;
+    border: 80px solid transparent;
+    border-image: url(/public/img/game/mc_background.png) 300 round;
+    overflow: hidden;
+}
+.mc_game_zone {
+    width: 1000%;
+    height: 700px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    transition: 1s;
+    transition-delay: .25s; /*順序要注意:delay放後面*/
+}
+/* mc_board是總成績畫面 */
+.mc_board{
+    width: 90%;
+    height: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    transition: 0.7s;
+    transition-delay: 1s;
+}
+/* 以下是公布成績左半區域 */
+.boardLeft{
+    width: 60%;
+    height: 700px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.board_qaGroup{
+    width: 100%;
+    /* background-color: #eb5c37; */
+    border-bottom: 2px solid rgb(32, 29, 29);
+    margin-top: 1rem;
+    margin-left: 1rem;
+    position: relative;
+    font-family: sans-serif;
+    font-weight: 600;
+    color: white;
+}
+.board_question{
+    font-size: 3rem;
+    padding-top: 1rem;
+    margin-bottom: 2.5rem;
+    word-wrap: normal;
+    white-space: pre-wrap;
+}
+.userAns{
+    font-size: 2.5rem;
+    word-wrap: normal;
+    white-space: pre-wrap;
+}
+.rightAns{
+    width: 75%;
+    font-size: 2.5rem;
+    word-wrap: normal;
+    white-space: pre-wrap;
+}
+.rightAns span{
+    color: rgb(250, 182, 35);
+}
+.goTour_btn{
+    width: 200px;
+    height: 40px;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    font-weight: 600;
+    text-align: center;
+    line-height: 40px;
+    background-color: rgb(249,177,18);
+    color: white;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+}
+.goTour_btn:hover{
+    background-color: gray;
+}
+/* 以下是公布成績右半區域 */
+.boardRight{
+    width: 40%;
+    text-align: center;
+    position: relative;
+}
+.board_point{
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 6rem;
+    color: red;
+    position: absolute;
+    top: 16%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.board_pointText{
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    color: white;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.boardRight img{
+    width: 50%;
+    height: auto;
+    margin-top: 3rem;
+}
+.correctNum{
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 4rem;
+    color: white;
+    margin-top: 2rem;
+}
+.incorrectNum{
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 4rem;
+    color: white;
+}
+.board_btnGroup{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.board_winBtn{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    cursor: pointer;
+}
+.board_winBtn p{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #eb5c37;
+    pointer-events: none;
+}
+.board_winBtn img{
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+}
+/* 以下是問題區域(列車) */
+.choose_question{
+    width: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.choose_question h2 {
+    height: 50px;
+    font-family: sans-serif;
+    font-size: 4rem;
+    color: white;
+    text-align: center;
+    word-wrap: normal;
+    white-space: pre-wrap;
+}
+.mc_btnGroup{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.mc_btnGroup button{
+    font-family: sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    width: 450px;
+    height:90px;
+    border: none;
+    background-color: rgb(249,177,18);
+    color: white;
+    border-radius: 30px;
+    word-wrap: normal;
+    white-space: pre-wrap;
+}
+.send_fianlAnswer{
+    font-family: sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    width: 50px;
+    height:250px;
+    border: none;
+    background-color: rgb(249,177,18);
+    color: white;
+    border-radius: 10px;
+    padding-top: 1.25rem;
+    padding-right: 0.4rem;
+    position: absolute;
+    right: 100px;
+    bottom: 280px;
+    letter-spacing: 1.5rem;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    transition-delay: .5s;
+    transition: .5s;
+    cursor: pointer;
+}
+.send_fianlAnswer:hover{
+    background-color: gray;
+}
+.send_fianlAnswer i{
+    transform: translateX(3px);
+}
+.mc_help {
+    text-align: center;
+    line-height: 35px;
+    width: 40px;
+    height: 40px;
+    margin-left: 30px;
+    font-size: 1.5rem;
+    color: white;
+    border: 2px solid gold;
+    border-radius: 50%;
+    position: absolute;
+    right: 80px;
+    bottom: 80px;
+    cursor: pointer;
+}
+.mc_video{
+    width: 100%;
+    height: 800px;
+    background-color: rgba(0, 0, 0, 0.808);
+    position: absolute;
+    z-index: 999;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mcVideo_closeBtn{
+    position: absolute;
+    right: 10%;
+    top: 4rem;
+    cursor: pointer;
+    z-index: 1000;
+}
+.mcVideo_closeBtn .fas.fa-times{
+    font-size: 3.5rem;
+    color: white;
+}
+.animals-footer{
+    width: 100%; 
+}
+.animals-footer img{
+    width: 100%;
+    height: auto;
+    border: none;  
+}
+@media (min-width:701px) and (max-width:1400px) {
+    .spot_container{
+        margin-bottom: -280px;
+    }
+    .animals-footer{
+        margin-top: 150px;
+    }
+}

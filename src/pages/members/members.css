@@ -1,0 +1,192 @@
+:root {
+    --tysu_color: #f9b112;
+    --tysu_color2: #eb5c37;
+    --tysu_fontSize: 1.2rem;
+    --tysu_fontWeight: 600;
+    --tysu_showdow: 0 0 3px #f9b01210;
+    --tysu_inputMargin: 1.8rem 0 0 1.8rem;
+}
+
+@media screen and (max-width: 900px) {
+    .tysu_row {
+        max-width: 88.5%;
+        margin: 0 auto;
+    }
+    .tysu_grade {
+        width: 100%;
+        padding-top: 60px;
+    }
+    .tysu_gradeImg {
+        padding-top: 0;
+    }
+
+    .tysu_bg {
+        max-width: 300px;
+        left: calc(85% - 260px);
+    }
+    .tysu_listHr {
+        width: 97%;
+    }
+    .tysu_hr {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .tysu_logInfo,
+    .tysu_logInOut {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 635px) {
+    .tysu_gradeImg {
+        height: 155px;
+    }
+
+    .tysu_memberList {
+        flex-wrap: wrap;
+    }
+
+    .tysu_memberList li {
+        width: 16.5rem;
+        height: 50px;
+        line-height: 50px;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .tysu_memberChild li,
+    .tysu_focusUnderLine li {
+        width: 8.5rem;
+    }
+
+    .tysu_memberChild {
+        margin-bottom: 0;
+    }
+    .tysu_memberChild li {
+        margin: 5px;
+    }
+    .tysu_memberChild li,
+    .tysu_focusUnderLine li {
+        width: 7rem;
+    }
+    .tysu_focusUnderLine li {
+        margin-top: 0;
+    }
+    .tysu_logInfo,
+    .tysu_logInOut {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 631px) {
+    .tysu_tBody2 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .tysu_tBody1 {
+        display: none;
+    }
+
+    .tysu_input {
+        width: 100%;
+        margin: 5px 0 0 0;
+    }
+    .tysu_tr td {
+        display: flex;
+        flex-wrap: wrap;
+        width: 85%;
+        margin: 20px auto;
+    }
+    #emailHelp,
+    #nameHelp,
+    #genderHelp,
+    #birthHelp,
+    #tysu_adressHelp,
+    #tysu_passHelp,
+    #tysu_cfPassHelp,
+    #tysu_codeHelp,
+    #addressHelp {
+        margin-left: 0;
+    }
+    #birthHelp {
+        margin-bottom: 0;
+    }
+
+    .tysu_year,
+    .tysu_month,
+    .tysu_date {
+        width: 75%;
+        margin: 5px 1.2rem 0;
+    }
+    .tysu_year {
+        margin-left: 0;
+    }
+    .tysu_editBtn,
+    .tysu_cancelBtn {
+        margin: 0;
+    }
+    .tysu_memberBtnGroup {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .tysu_input {
+        width: 100%;
+    }
+    .tysu_year,
+    .tysu_month,
+    .tysu_date {
+        width: 28%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .tysu_gradeImg {
+        height: 128px;
+    }
+
+    .tysu_memberList li {
+        width: 13rem;
+    }
+
+    .tysu_memberChild {
+        margin-bottom: 0;
+    }
+    .tysu_memberChild li {
+        margin: 5px;
+    }
+    .tysu_memberChild li,
+    .tysu_focusUnderLine li {
+        width: 5.8rem;
+    }
+    .tysu_focusUnderLine li {
+        margin-top: 0;
+    }
+    .tysu_memberBtnGroup {
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (max-width: 405px) {
+    .tysu_gradeImg {
+        height: 106px;
+    }
+    .tysu_memberList li {
+        width: 12rem;
+    }
+
+    .tysu_memberBtnGroup {
+        justify-content: space-evenly;
+    }
+
+    .tysu_editBtn,
+    .tysu_cancelBtn {
+        width: 145px;
+    }
+}

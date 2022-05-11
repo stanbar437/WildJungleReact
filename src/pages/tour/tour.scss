@@ -1,0 +1,582 @@
+@font-face {
+  font-family: "Noto Sans TC", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
+  unicode-range: U+4E00-9FFF;
+}
+
+@font-face {
+  font-family: "Playfair Display", serif;
+  src: url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+  unicode-range: U+00-024F;
+}
+:root {
+  --tour_color: #f9b112;
+  --tour_color2: #eb5c37;
+  --tour_fontSize: 1.2rem;
+  --tour_fontWeight: 600;
+  --tour_showdow: 0 0 3px #f9b01210;
+  --tour_inputMargin: 1.8rem 0 0 1.8rem;
+  --tour_chinesefont: "Noto Sans", sans-serif;
+}
+
+.tourbackground {
+  position: absolute;
+  width: 100%;
+
+  img {
+    width: 100%;
+
+
+  }
+}
+
+.tourback {
+  height: 160vh;
+  width: 100%;
+  z-index: 0;
+  background-color: #000;
+}
+
+.tourContainer {
+  width: 100%;
+  min-height: 50rem;
+  position: relative;
+  width: calc(100% - 60px);
+  padding-top: 60px;
+  margin: 0px 30px 0px 30px;
+}
+
+.tour_Group {
+  display: flex;
+  padding-top: 5rem;
+  flex-wrap: wrap;
+}
+.tourGuide1 {
+  max-width: 30%;
+}
+.tourtextArea1 {
+  color: #ffffff;
+}
+.tourH2 {
+  font-size: 3rem;
+}
+
+.tourP1 {
+  font-size: 3rem;
+}
+.tourGuide1 img {
+  width: 100%;
+}
+.tourGuide2 {
+  width: 70%;
+  display: flex;
+  color: white;
+}
+.tourGuide2 figure {
+  height: 40vw;
+  max-width: 25%;
+  text-align: center;
+}
+.tourR1img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 35%;
+}
+.tourR2img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 70%;
+}
+.tourR3img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 70%;
+}
+.tourR4img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 70%;
+}
+.tourR1img {
+  opacity: 0.8;
+}
+.tourR1img:hover {
+  margin-top: -20px;
+  opacity: 1;
+}
+.tourR2img:hover {
+  margin-top: -20px;
+  opacity: 1;
+}
+.tourR3img:hover {
+  margin-top: -20px;
+  opacity: 1;
+}
+.tourR4img:hover {
+  margin-top: -20px;
+  opacity: 1;
+}
+.tourR2img {
+  margin: 6% 0 1% 0;
+  opacity: 0.8;
+}
+.tourR3img {
+  margin: 3% 0 4% 0;
+  opacity: 0.8;
+}
+.tourR4img {
+  margin: 0 0 7% 0;
+  opacity: 0.8;
+}
+figcaption {
+  font-weight: var(--tour_fontWeight);
+  font-size: var(--tour_fontSize);
+}
+#container2 {
+  min-height: 45vh;
+}
+.tourCenterIndustry {
+  width: 100%;
+  min-height: 25rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 7%;
+}
+
+.tourCenterCard {
+  width: 80%;
+  height: 80%;
+  background-color: #000000;
+  padding-top: 3%;
+  text-align: center;
+}
+
+.figure {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+.figure:hover {
+  transition: 1s;
+  transform: scale(1.3);
+}
+.figure img {
+  width: 100%;
+  height: 100%;
+}
+.tourLifeTitle {
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+
+.tourTitle {
+  font-weight: var(--tour_fontWeight);
+  font-size: var(--tour_fontSize);
+}
+.tourCardTwoText {
+  font-weight: var(--tour_fontWeight);
+  font-size: var(--tour_fontSize);
+  color: #ffffff;
+  word-wrap: break-word;
+}
+.tourCenterText {
+  font-weight: var(--tour_fontWeight);
+  font-size: var(--tour_fontSize);
+  color: #ffffff;
+}
+.tourdescription {
+  display: flex;
+  // padding-top: 2rem;
+  width: 100%;
+  height:100%;
+}
+.tourdescriptiongGuild {
+  width: 100%;
+  height: 100%;
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.tourdescriptionGuild1 {
+  width: 100%;
+  height: 350px;
+}
+.tourdescriptionGuild2 {
+  width: 100%;
+}
+.tourdescriptionpic{
+  width: 100%;
+  height: 300px;
+}
+.tourdescriptionpic img {
+  object-fit: content;
+  width: 350px; //手機
+  height: 280px;
+}
+.tourdescriptionGuild2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.tourdescriptionGuild2Text {
+  width: 100%;
+  height: 200px;
+  white-space: normal;
+}
+.tourdescriptionGuild2Text > h2 {
+  color: var(--tour_color);
+}
+.tourdescriptionGuild2Text p {
+  color: white;
+  font-size: var(--tour_fontSize);
+  font-weight: var(--tour_fontWeight);
+}
+.tourdescriptionGuild2Icon {
+  width: 100%;
+  margin-top: 20rem;
+  left: 20px;
+}
+.tourdescriptionGuild2Iconbox {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.tourdescriptionGuild2Icon1 {
+  width: 50px;
+  height: 50px;
+  background-color: #ffffff;
+  background-image: url(./imgs/footprint.svg);
+  background-repeat: no-repeat;
+  position:relative;
+}
+.tourdescriptionGuild2Icon1:hover::after{
+    content:url(./imgs/hippo_distribution.png);
+    width:620px;
+    height:330px;
+    background:#f9b112;
+    display:block;
+    position:absolute;
+    top:-250px;
+    left:-10px;
+    z-index: 999;
+  
+}
+.tourdescriptionGuild2Icon2 {
+  width: 50px;
+  height: 50px;
+  background-color: #ffffff;
+  background-image: url(./imgs/food.svg);
+  background-repeat: no-repeat;
+  position:absolute;
+  margin-left: 8rem;
+}
+.tourdescriptionGuild2Icon2:hover::before{
+  content:url(./imgs/hippo_diet.png);
+  width:620px;
+  height:330px;
+  background:#f9b112;
+  display:block;
+  position:absolute;
+  top:-250px;
+  left:-50px;
+ 
+
+}
+.touradoptbtn {
+  font-family: var(--tour_chinesefont);
+  color: white;
+  font-size: 1.5rem;
+  background-color: var(--tour_color);
+  border-radius: 0;
+  width:150px;
+  height: 80px;
+  // margin-right: 45px;
+}
+.tourLife {
+  margin-top: 100px;
+}
+
+.tourLifeTop {
+  width: 300px;
+  height: 300px;
+}
+.tourLifeToppic {
+  width: 200px;
+  height: 200px;
+}
+.tourLifeToppic1 {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  object-position: 35%;
+}
+
+.col-2 img {
+  width: 400%;
+  height: 100%;
+}
+.Carousel__ItemSet {
+  margin-top: 50px;
+}
+
+#tourImgBackground1:hover {
+  max-width: 700px;
+  transform: scale(1);
+  position: absolute;
+  z-index: 999;
+  left:400px;
+  
+}
+.TourIntroduce{
+  position: relative;
+}
+
+#tourImgBackground1:hover::before{
+  position: absolute; /*絕對定位*/
+  content: ""; 
+  width: 100vh;
+  height: 500px;
+  background-color:black;
+  top: 0;
+  left: -150px;
+  z-index: -1;
+  transform:scale(3);
+
+}
+
+
+.Touritem img {
+  display: block;
+  max-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  object-position: 10%;
+}
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+.tourwrap{
+  width:100%; 
+  display: flex;
+}
+
+.Touritem{
+  width:25%;
+  position:relative; 
+}
+
+
+.Touritem img{
+  width:100%;
+  vertical-align: middle;
+}
+
+.Touritem h2{
+  font-size: 24px;
+  color:#ff0;
+  font-weight: 500;
+
+}
+.Touritem p{
+  font-size: 18px;
+  color:#fff; 
+  font-weight: 100;
+
+} 
+
+.Touritem .txt{
+  position: absolute;  
+  top:0; 
+  right:0; 
+  bottom:0;
+  left: 0;
+  padding:20px;
+  background-color:rgba(0,0,0,.6); 
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0; 
+  transition: opacity .5s; 
+  white-space: normal;
+}
+
+.Touritem:hover .txt{
+  opacity:1; 
+}
+
+.Touritem h2::after{
+  content:'';
+  display: block; 
+  width:0%;
+  height:2px; 
+  margin:10px 0; 
+  background-color: #ff0;
+  transition: width .5s .3s; 
+}
+
+.Touritem:hover h2::after{
+  width:100%; 
+} 
+#TourDescriptionText{
+  font-weight: var(--tour_fontWeight);
+  font-size: var(--tour_fontSize);
+  font-family: "Noto Sans TC", sans-serif;
+  letter-spacing: 5px;
+  width: 100%;
+
+}
+.tourDisplayNone {
+  display: none;
+  
+}
+.tour_showBooking_area{
+  margin-top:10rem;
+}
+
+
+
+
+@media screen and (min-width: 980px) {
+  .tourContent {
+    font-size: 400%;
+    display: flex;
+    flex-direction: column;
+    letter-spacing: 1px;
+    font-weight: var(--tour_fontWeight);
+  }
+  .tourH2 {
+    font-size: 6rem;
+  }
+  
+  .tour_h2 {
+    font-size: 25px;
+  }
+  .tourRightIndustry table {
+    table-layout: fixed;
+  }
+  .tourText {
+    font-size: 20px;
+    text-align: center;
+  }
+  .tourRightIndustry figcaption {
+    font-weight: var(--tour_fontWeight);
+    font-size: 24px;
+  }
+  .tourCenterText {
+    font-weight: var(--tour_fontWeight);
+    font-size: var(--tour_fontSize);
+    left: 30%;
+    color: #ffffff;
+  }
+  .tourCenterIndustry {
+    width: 100%;
+    flex-wrap: nowrap;
+  }
+  #Centerimg2 {
+    margin-top: -20px;
+    margin-bottom: 20px;
+  }
+  #Centerimg3 {
+    margin-top: -40px;
+    margin-bottom: 40px;
+  }
+  #Centerimg4 {
+    margin-top: 20px;
+    margin-bottom: -20px;
+  }
+  .figcaption {
+    font-weight: var(--tour_fontWeight);
+    font-size: var(--tour_fontSize);
+    font-size: 2rem;
+  }
+  .tourdescriptionGuild1 {
+    width: 45%;
+    height:100%;
+  }
+  .tourdescriptionGuild2 {
+    width: 45%;
+  }
+  .tourback {
+    height: 65vh;
+    width: 100%;
+  }
+  .tourdescriptionGuild2Text {
+    width: 100%;
+    height: 300px;
+    margin-right: -100px;
+    margin: 0;
+  }
+  .tourLife {
+    margin-top: 300px;
+  }
+  .CarouselShow {
+    margin-left: "10rem";
+  }
+  .tourdescriptionpic img {
+    object-fit: content;
+    width: 900px; 
+    height: 495px;
+  }
+  .tourdescriptionGuild2Iconbox {
+    margin-top: -7rem;
+  }
+  .tour_showBooking_area{
+    margin-top:30rem;
+  }
+  .touradoptbtn {
+    font-family: var(--tour_chinesefont);
+    color: white;
+    font-size: 1.5rem;
+    background-color: var(--tour_color);
+    border-radius: 0;
+    width: 200px;
+    height: 100px;
+    margin-right: 5rem;
+  }
+  .tourdescriptionGuild2Icon2 {
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    background-image: url(./imgs/food.svg);
+    background-repeat: no-repeat;
+    position:absolute;
+    margin-left: 23rem;
+  }
+  .figure{
+    width: 200px;
+    height: 200px;
+
+  }
+  #TourDescriptionText{
+    font-weight: var(--tour_fontWeight);
+    font-size: var(--tour_fontSize);
+    font-family: "Noto Sans TC", sans-serif;
+    letter-spacing: 5px;
+    width: 100%;
+
+  
+  }
+
+
+}
+@media screen and (max-width: 768px) {
+  .tourGuide1 {
+    min-width: 100%;
+  }
+
+  .tourGuide2 {
+    min-width: 100%;
+  }
+  .tourGuide1 img {
+    display: none;
+  }
+}

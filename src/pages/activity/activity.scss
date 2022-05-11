@@ -1,0 +1,1144 @@
+$terry_color1: #eb5c37;
+$terry_color2: #f9b112;
+$terry_color3: #1b7754;
+$terry_white: #ffffff;
+$terry_black: #000000;
+
+@font-face {
+  font-family: "Noto Sans TC", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
+  unicode-range: U+4E00-9FFF;
+}
+
+@font-face {
+  font-family: "Playfair Display", serif;
+  src: url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+  unicode-range: U+00-024F;
+}
+
+@mixin mobile {
+  @media screen and (max-width: 700px) {
+    @content;
+  }
+}
+@mixin mobilePlus {
+  @media screen and (max-width: 950px) {
+    @content;
+  }
+}
+@mixin mobileMaxs {
+  @media screen and (max-width: 1100px) {
+    @content;
+  }
+}
+@mixin mobileMax {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+.styleFlex {
+  display: flex;
+  justify-content: center;
+}
+
+.seatsClick {
+  filter: invert(1%) sepia(30%) saturate(4000%) hue-rotate(40deg)
+    brightness(70%) contrast(127%);
+  width: 7%;
+  height: auto;
+  margin: 0.4% 1.4%;
+}
+.seat-disabled {
+  filter: invert(60%) sepia(20%) saturate(3000%) hue-rotate(300deg)
+    brightness(60%) contrast(180%);
+  width: 7%;
+  height: auto;
+  margin: 0.4% 1.4%;
+}
+
+.terry_show_area:hover {
+  box-shadow: 0px 0px 15px 2px rgb(233, 233, 233);
+}
+.terry_sponsor_area:hover {
+  box-shadow: 0px 0px 10px 2px rgb(233, 233, 233);
+}
+.terry_touch_area:hover {
+  box-shadow: 0px 0px 10px 2px rgb(233, 233, 233);
+}
+
+.modal_button {
+  width: 20%;
+  height: 40px;
+  border: none;
+  color: $terry_white;
+  background: #eb5c37;
+  font-family: "Noto Sans TC";
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.modal_text {
+  margin: 10px 0;
+  font-family: "Noto Sans TC";
+  font-size: 20px;
+  font-weight: 300;
+}
+
+// ---------------------共用---------------------
+
+.terry_bg {
+  width: 100%;
+  // height: 1400vh;
+  padding-top: 60px;
+  font-family: sans-serif;
+  font-size: 16px;
+  background-color: $terry_black;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: -240px;
+}
+.terry_leaf_leftArea {
+  position: absolute;
+  margin-top: -10px;
+  left: 0px;
+  img {
+    height: 300px;
+  }
+}
+.terry_leaf_rightArea {
+  right: 0;
+  position: absolute;
+  margin-top: 0px;
+  img {
+    height: 300px;
+  }
+}
+/*葉子背景區結束*/
+
+.terry_container {
+  width: 90%;
+  padding-top: 60px;
+  font-family: sans-serif;
+  font-size: 16px;
+  // outline: 2px solid $terry_white;
+  position: relative;
+}
+/*第一區塊開始*/
+
+.terry_show_area {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6.5%;
+  @include mobile {
+    flex-direction: column;
+    .terry_show_area_textArea {
+      flex-direction: row;
+      align-items: flex-end;
+      margin-bottom: -20px;
+      .terry_01 {
+        font-size: 100px;
+        margin: 0;
+      }
+      .terry_show_subtitle {
+        font-size: 26px;
+        -webkit-text-stroke: 0.8px white;
+        margin-left: 16%;
+        margin-bottom: 26px;
+      }
+      .terry_show_viewmore {
+        width: 20%;
+        height: 30px;
+        line-height: 30px;
+        margin-bottom: 30px;
+      }
+    }
+    .terry_title_grop2 {
+      display: flex;
+      flex-direction: row;
+      margin: 0;
+      margin-left: 16%;
+      margin-bottom: 14px;
+      .terry_show_title1 {
+        margin: 0;
+        font-size: 32px;
+      }
+      .terry_show_title2 {
+        margin: 0;
+        margin-left: 3%;
+        font-size: 32px;
+      }
+    }
+    .terry_show_area_img {
+      width: 100%;
+    }
+  }
+}
+
+.terry_show_area_textArea {
+  color: $terry_white;
+  display: flex;
+  flex-direction: column;
+  // outline: 2px solid $terry_white;
+  .terry_01 {
+    font-family: "Playfair Display";
+    font-size: 200px;
+    margin-top: -120px;
+  }
+  .terry_show_title1 {
+    font-family: "Playfair Display";
+    font-size: 60px;
+  }
+  .terry_show_title2 {
+    font-family: "Playfair Display";
+    font-size: 60px;
+    margin-top: -40px;
+  }
+  .terry_show_subtitle {
+    font-family: "Noto Sans TC";
+    font-size: 42px;
+    margin-top: -26px;
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+  }
+  .terry_show_viewmore {
+    background-color: $terry_color3;
+    width: 215px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+  }
+  .terry_title_grop {
+    margin-top: 25%;
+    flex-grow: 2;
+  }
+}
+
+.terry_show_area_img {
+  width: 75%;
+  height: 550px;
+  // outline: 2px solid $terry_white;
+  background: url("../../../public/img/activity/show1.jpg") center center/cover
+    no-repeat;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+/*01banner結束*/
+.areaDisplayNone {
+  display: none;
+}
+
+.terry_showIntroduction_area {
+  margin-top: 12%;
+  display: flex;
+
+  .terry_showIntroduction_img {
+    width: 70%;
+    height: 700px;
+    background: url("../../../public/img/activity/show2.jpg") center left/cover
+      no-repeat;
+    // img {
+    //   width: 100%;
+    //   height: 100%;
+    //   object-fit: cover 10px;
+    // }
+  }
+  .terry_showIntroduction_img2 {
+    width: 70%;
+    height: 700px;
+    background: url("../../../public/img/activity/animalShow2.jpg") 60% / cover
+      no-repeat;
+    // img {
+    //   width: 100%;
+    //   height: 100%;
+    //   object-fit: cover 10px;
+    // }
+  }
+  .terry_showIntroduction_img3 {
+    width: 70%;
+    height: 700px;
+    background: url("../../../public/img/activity/animalShow3.jpg") center
+      left/cover no-repeat;
+    // img {
+    //   width: 100%;
+    //   height: 100%;
+    //   object-fit: cover 10px;
+    // }
+  }
+  .terry_showIntroduction_img4 {
+    width: 70%;
+    height: 700px;
+    background: url("../../../public/img/activity/animalShow4.jpg") center
+      left/cover no-repeat;
+    // img {
+    //   width: 100%;
+    //   height: 100%;
+    //   object-fit: cover 10px;
+    // }
+  }
+  .terry_showIntroduction_textArea {
+    width: 50%;
+    height: auto;
+    // outline: 2px solid $terry_white;
+    padding-top: 2%;
+    padding-left: 4%;
+    color: $terry_white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    .showTitle {
+      font-family: "Noto Sans TC";
+      font-size: 2.3rem;
+    }
+    .showIntroduction {
+      font-family: "Noto Sans TC";
+      font-weight: 300;
+      font-size: 20px;
+      word-wrap: normal;
+      white-space: pre-wrap;
+      margin-top: 3%;
+    }
+    .showLocation {
+      width: 8px;
+      height: 18px;
+      background-color: #f9b112;
+      position: relative;
+      margin-top: 4%;
+    }
+    .showLocation::after {
+      content: "活動地點";
+      font-size: 1.5rem;
+      color: #f9b112;
+      position: absolute;
+      top: -4px;
+      margin-left: 12px;
+    }
+    .showNotice {
+      width: 8px;
+      height: 18px;
+      background-color: #f9b112;
+      position: relative;
+      margin-top: 3%;
+    }
+    .showLocation_text {
+      font-family: "Noto Sans TC";
+      font-weight: 300;
+      margin-top: 1%;
+    }
+    .showNotice::after {
+      content: "訂位須知";
+      font-size: 1.5rem;
+      color: #f9b112;
+      position: absolute;
+      top: -4px;
+      margin-left: 12px;
+    }
+    .showNotice_text {
+      font-family: "Noto Sans TC";
+      font-weight: 300;
+      font-size: 14px;
+      word-wrap: normal;
+      white-space: pre-wrap;
+      flex-grow: 2;
+      margin-top: 1%;
+    }
+    .showSelect {
+      display: flex;
+      flex-direction: column;
+      margin-top: 8%;
+      select {
+        width: auto;
+        height: 50px;
+        text-align: center;
+        font-size: 1.5rem;
+        background-color: transparent;
+        color: $terry_white;
+        border-color: #eb5c37;
+        margin: 5px 0;
+        //selectIcon
+        appearance: none;
+        background: url(../../../public/img/activity/selectIcon.svg) 100% / 5%
+          no-repeat;
+      }
+      
+      button {
+        height: 50px;
+        background-color: #eb5c37;
+        border: none;
+        font-size: 1.5rem;
+        color: $terry_white;
+      }
+    }
+  }
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    .terry_showIntroduction_img {
+      width: 100%;
+      height: 550px;
+    }
+    .terry_showIntroduction_textArea {
+      width: 100%;
+      padding: 14px 0 0 0;
+    }
+  }
+}
+.terry_showBooking_area {
+  display: flex;
+  justify-content: center;
+  margin-top: 14%;
+  margin-left: 7%;
+  // outline: 1px solid white;
+  .tourAndNotice {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    // outline: 1px solid white;
+    .tourImage {
+      width: 120%;
+      height: auto;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .bookingNotice {
+    width: 8px;
+    height: 18px;
+    background-color: #f9b112;
+    position: relative;
+    margin-top: -2%;
+    margin-left: 10%;
+  }
+  .bookingNotice::after {
+    content: "訂票提示";
+    font-size: 1.5rem;
+    color: #f9b112;
+    position: absolute;
+    top: -4px;
+    margin-left: 12px;
+  }
+  .bookingNotice_text {
+    font-family: "Noto Sans TC";
+    font-weight: 300;
+    font-size: 14px;
+    word-wrap: normal;
+    white-space: pre-wrap;
+    color: $terry_white;
+    margin-top: 3%;
+    padding: 0 10%;
+  }
+  .bookingArea {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .stage {
+      // width: 120px;
+      // height: 50px;
+      // border: 6px solid $terry_white;
+      position: relative;
+      margin-top: 3%;
+      width: 30%;
+      height: auto;
+      // padding: 1%;
+    }
+    // .stage::after {
+    //   content: "舞台";
+    //   position: absolute;
+    //   top: 55%;
+    //   left: 50%;
+    //   transform: translate(-50%, -50%);
+    //   color: $terry_white;
+    //   font-family: "Noto Sans TC";
+    //   font-size: 20px;
+    //   font-weight: 300;
+    // }
+    .seatsArea {
+      width: 75%;
+      // height: auto;
+      flex-grow: 2;
+      justify-content: center;
+      margin-top: 8%;
+      position: relative;
+    }
+    /*
+    .seatsArea::before {
+      content: "12345678";
+      position: absolute;
+      font-family: "Noto Sans TC";
+      font-size: 28px;
+      font-weight: 500;
+      color: #505050;
+      top: -44px;
+      left: 28px;
+      letter-spacing: 4.5rem;
+    }
+    .seatsArea::after {
+      content: "ABCDEFGH";
+      // width: 100px;
+      position: absolute;
+      font-family: "Noto Sans TC";
+      font-size: 28px;
+      writing-mode: vertical-lr;
+      text-orientation: upright;
+      font-weight: 500;
+      color: #505050;
+      top: 14px;
+      left: -50px;
+      letter-spacing: 1.8rem;
+    }
+    */
+    .seats {
+      width: 7%;
+      height: auto;
+      margin: 0.4% 1.4%;
+    }
+    .buttonGrop {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      button {
+        width: 20%;
+        height: 50px;
+        border: none;
+        color: $terry_white;
+        font-family: "Noto Sans TC";
+        font-size: 16px;
+        font-weight: 300;
+        margin: 0 30px;
+      }
+      button:nth-child(1) {
+        background-color: $terry_color1;
+      }
+      button:nth-child(2) {
+        background-color: $terry_color2;
+      }
+    }
+  }
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+    .tourAndNotice {
+      width: 100%;
+      flex-direction: row;
+      .tourImage {
+        width: 80%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+      }
+    }
+    .bookingNotice_grop {
+      width: 100%;
+      .bookingNotice {
+        margin-top: 40px;
+      }
+    }
+    .bookingArea {
+      width: 130%;
+      margin-left: -4%;
+      padding: 0;
+      margin-top: 50px;
+    }
+  }
+}
+.terry_01area {
+  display: flex;
+  width: 150%;
+}
+/*第一區塊結束*/
+/*第二區塊開始*/
+.terry_sponsor_area {
+  .terry_show_area_img1 {
+    width: 75%;
+    height: 550px;
+    // outline: 2px solid $terry_white;
+    background: url("../../../public/img/activity/show3.jpeg") center
+      bottom/cover no-repeat;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12%;
+  @include mobile {
+    flex-direction: column;
+    .terry_show_area_textArea {
+      flex-direction: row;
+      align-items: flex-end;
+      margin-bottom: -20px;
+      .terry_01 {
+        font-size: 100px;
+        margin: 0;
+      }
+      .terry_show_subtitle {
+        font-size: 26px;
+        -webkit-text-stroke: 0.8px white;
+        margin-left: 16%;
+        margin-bottom: 26px;
+      }
+      .terry_show_viewmore {
+        width: 20%;
+        height: 30px;
+        line-height: 30px;
+        margin-bottom: 30px;
+      }
+    }
+    .terry_title_grop2 {
+      display: flex;
+      flex-direction: row;
+      margin: 0;
+      margin-left: 16%;
+      margin-bottom: 14px;
+      .terry_show_title1 {
+        margin: 0;
+        font-size: 32px;
+      }
+      .terry_show_title2 {
+        margin: 0;
+        margin-left: 3%;
+        font-size: 32px;
+      }
+    }
+    .terry_show_area_img1 {
+      width: 100%;
+    }
+  }
+}
+
+.terry_sponsor_cardsArea {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10%;
+  .cardbg {
+    margin: 5px;
+    width: 48%;
+    height: 450px;
+  }
+  .cardbg1 {
+    background-color: $terry_color3;
+    display: flex;
+    position: relative;
+  }
+  .cardbg2 {
+    background-color: $terry_white;
+    display: flex;
+    position: relative;
+  }
+  .cardbg3 {
+    background-color: $terry_color2;
+    display: flex;
+    position: relative;
+  }
+  .cardbg4 {
+    background-color: $terry_color1;
+    display: flex;
+    position: relative;
+  }
+  .cardbg5 {
+    background-color: #1297cf;
+    display: flex;
+    position: relative;
+  }
+  .cardbg6 {
+    background-color: #777b7e;
+    display: flex;
+    position: relative;
+  }
+  .sponsor_animalImg1 {
+    background: url(../../../public/img/home/star_eagle_bk.png) 2% / contain
+      no-repeat;
+    width: 100%;
+    height: auto;
+  }
+  .sponsor_animalImg2 {
+    background: url(../../../public/img/home/star_shark_bk.png) 0% / contain
+      no-repeat;
+    width: 100%;
+    height: auto;
+  }
+  .sponsor_animalImg3 {
+    background: url(../../../public/img/home/star_tiger_bk.png) 4% / contain
+      no-repeat;
+    width: 100%;
+    height: auto;
+  }
+  .sponsor_animalImg4 {
+    background: url(../../../public/img/home/star_elephant_bk.png) 8% / contain
+      no-repeat;
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+  }
+  .sponsor_animalImg5 {
+    background: url(../../../public/img/home/star_hitefox_bk.png) 8% / contain
+      no-repeat;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+  .sponsor_animalImg6 {
+    background: url(../../../public/img/activity/questionMark.svg) 4% / contain
+      no-repeat;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+  .sponsor_introduction_area {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 47%;
+    height: 100%;
+    right: 0;
+    padding: 10% 5% 5% 0;
+    .sponsor_animalName {
+      width: auto;
+      color: $terry_white;
+      font-family: "Playfair Display";
+      font-size: 44px;
+      font-weight: 600;
+      text-align: end;
+    }
+    .sponsor_introductionText {
+      font-family: "Noto Sans TC";
+      font-weight: 300;
+      font-size: 18px;
+      word-wrap: normal;
+      white-space: pre-wrap;
+      color: $terry_white;
+      text-indent: 2em;
+      padding-top: 5%;
+      flex-grow: 2;
+    }
+    .sponsor_animalName2 {
+      width: auto;
+      color: $terry_black;
+      font-family: "Playfair Display";
+      font-size: 44px;
+      font-weight: 600;
+      text-align: end;
+    }
+    .sponsor_introductionText2 {
+      font-family: "Noto Sans TC";
+      font-weight: 300;
+      font-size: 18px;
+      word-wrap: normal;
+      white-space: pre-wrap;
+      color: $terry_black;
+      text-indent: 2em;
+      padding-top: 5%;
+      flex-grow: 2;
+    }
+    button {
+      width: 80%;
+      height: 50px;
+      border: none;
+      background-color: $terry_black;
+      color: $terry_white;
+      text-align: center;
+    }
+  }
+  @include mobilePlus {
+    flex-direction: column;
+    align-content: center;
+    .cardbg {
+      width: 100%;
+      .sponsor_animalImg {
+        background: url(../../../public/img/home/star_eagle_bk.png) center
+          center/cover;
+        width: 90%;
+        height: auto;
+      }
+      .sponsor_animalImg2 {
+        background: url(../../../public/img/home/star_shark_bk.png) -30% / contain
+          no-repeat;
+        width: 100%;
+        height: auto;
+      }
+      .sponsor_animalImg3 {
+        background: url(../../../public/img/home/star_tiger_bk.png) center left /
+          contain no-repeat;
+        width: 100%;
+        height: auto;
+      }
+      .sponsor_animalImg4 {
+        background: url(../../../public/img/home/star_elephant_bk.png) center
+          left / contain no-repeat;
+        width: 100%;
+        height: auto;
+        margin-top: 30px;
+      }
+      .sponsor_animalImg5 {
+        background: url(../../../public/img/home/star_hitefox_bk.png) center
+          left / contain no-repeat;
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+      }
+      .sponsor_animalImg6 {
+        background: url(../../../public/img/activity/questionMark.svg) -35% / contain
+          no-repeat;
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+      }
+      .sponsor_introductionText {
+        font-size: 15px;
+        margin-top: 8%;
+      }
+      .sponsor_introductionText2 {
+        font-size: 15px;
+        margin-top: 8%;
+      }
+      .sponsor_introductionText3 {
+        font-size: 15px;
+      }
+      .sponsor_introductionText4 {
+        font-size: 15px;
+      }
+      .sponsor_introductionText5 {
+        font-size: 15px;
+      }
+      .sponsor_introductionText6 {
+        font-size: 15px;
+      }
+    }
+  }
+}
+.terry_sponsor_planSelectionArea {
+  display: flex;
+  margin-top: 10%;
+  padding: 0 3%;
+  position: relative;
+  .demoArea {
+    width: 49%;
+    height: auto;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .imgBorder {
+    position: relative;
+  }
+  .animalName {
+    width: 100%;
+    color: $terry_white;
+    font-family: "Playfair Display";
+    font-size: 68px;
+    font-weight: 600;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    margin-bottom: 1%;
+  }
+  .animalImg1 {
+    position: absolute;
+    background: url(../../../public/img/home/star_eagle.png) center
+      center/contain no-repeat;
+    width: 55%;
+    height: 100%;
+    bottom: 80px;
+  }
+  .animalImg2 {
+    position: absolute;
+    background: url(../../../public/img/home/star_shark.png) 30% / contain
+      no-repeat;
+    width: 50%;
+    height: 100%;
+    bottom: 80px;
+    left: 10px;
+  }
+  .animalImg3 {
+    position: absolute;
+    background: url(../../../public/img/home/star_tiger.png) center
+      center/contain no-repeat;
+    width: 40%;
+    height: 100%;
+    bottom: 12.5%;
+    left: 80px;
+  }
+  .animalImg4 {
+    position: absolute;
+    background: url(../../../public/img/home/star_elephant.png) center
+      center/contain no-repeat;
+    width: 45%;
+    height: 100%;
+    bottom: 85px;
+    left: 75px;
+  }
+  .animalImg5 {
+    position: absolute;
+    background: url(../../../public/img/home/star_hitefox.png) center
+      center/contain no-repeat;
+    width: 45%;
+    height: 100%;
+    bottom: 65px;
+    left: 40px;
+  }
+  .introduction_area {
+    display: flex;
+    flex-direction: column;
+    width: 38%;
+    margin-left: 9%;
+    .sponsor_introductionText3 {
+      font-family: "Noto Sans TC";
+      font-weight: 300;
+      font-size: 24px;
+      word-wrap: normal;
+      white-space: pre-wrap;
+      color: $terry_white;
+      padding-top: 46%;
+      line-height: 38px;
+      flex-grow: 2;
+    }
+    .sponsorSelect {
+      display: flex;
+      flex-direction: column;
+      // margin-top: 20%;
+      select {
+        width: auto;
+        height: 60px;
+        text-align: center;
+        font-size: 1.5rem;
+        color: $terry_black;
+        margin: 3% 0;
+        //selectIcon
+        appearance: none;
+        background-image: url(../../../public/img/activity/selectIcon.svg);
+        background-size: 100% / 5%;
+        background-repeat: no-repeat;
+        background-position: right;
+        background-color: $terry_white;
+      }
+    }
+    .buttonGrop2 {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      button {
+        width: 45%;
+        height: 50px;
+        border: none;
+        color: $terry_white;
+        font-family: "Noto Sans TC";
+        font-size: 20px;
+        font-weight: 300;
+        margin-top: 3%;
+      }
+      button:nth-child(1) {
+        background-color: $terry_color1;
+      }
+      button:nth-child(2) {
+        background-color: $terry_color2;
+      }
+    }
+    @include mobileMax {
+      .sponsor_introductionText3 {
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+  }
+  @include mobilePlus {
+    flex-direction: column;
+    align-content: center;
+    .demoArea {
+      width: 100%;
+      .imgBorder {
+        width: 100%;
+        height: auto;
+      }
+      .animalImg1 {
+        margin-top: 0%;
+        width: 100%;
+        height: auto;
+        top: -38%;
+        left: 3%;
+      }
+      .animalImg2 {
+        margin-top: 0%;
+        width: 97%;
+        height: auto;
+        top: -40%;
+        left: -2%;
+      }
+      .animalImg3 {
+        margin-top: 0%;
+        width: 80%;
+        height: auto;
+        top: -41.5%;
+        left: 8%;
+      }
+      .animalImg4 {
+        margin-top: 0%;
+        width: 90%;
+        height: auto;
+        top: -40%;
+        left: 6%;
+      }
+      .animalImg5 {
+        margin-top: 0%;
+        width: 90%;
+        height: auto;
+        top: -40%;
+      }
+    }
+    .introduction_area {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      .sponsor_introductionText3 {
+        padding-top: 10%;
+        padding-bottom: 5%;
+      }
+    }
+  }
+}
+
+.terry_touch_area {
+  display: flex;
+  margin-top: 12%;
+  justify-content: space-between;
+  .terry_show_area_img2 {
+    width: 75%;
+    height: 550px;
+    // outline: 2px solid $terry_white;
+    background: url("../../../public/img/activity/touch1.jpg") center
+      center/cover no-repeat;
+  }
+  @include mobile {
+    flex-direction: column;
+    .terry_show_area_textArea {
+      flex-direction: row;
+      align-items: flex-end;
+      margin-bottom: -20px;
+      .terry_01 {
+        font-size: 100px;
+        margin: 0;
+        margin-bottom: 10px;
+      }
+      .terry_show_subtitle {
+        font-size: 26px;
+        -webkit-text-stroke: 0.8px white;
+        margin-left: 16%;
+        margin-bottom: 26px;
+      }
+      .terry_show_viewmore {
+        width: 20%;
+        height: 30px;
+        line-height: 30px;
+        margin-bottom: 30px;
+      }
+    }
+    .terry_title_grop2 {
+      display: flex;
+      flex-direction: row;
+      margin: 0;
+      margin-left: 16%;
+      margin-bottom: 14px;
+      .terry_show_title1 {
+        margin: 0;
+        font-size: 32px;
+      }
+      .terry_show_title2 {
+        margin: 0;
+        margin-left: 3%;
+        font-size: 32px;
+      }
+    }
+    .terry_show_area_img2 {
+      width: 100%;
+    }
+  }
+}
+.terry_touch_imgArea {
+  display: flex;
+  margin-top: 12%;
+  // height: 400px;
+  .imgAndNameGrop {
+    width: 60%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .terry_touchshow1 {
+      width: 100%;
+      height: 400px;
+      // outline: 2px solid white;
+      background: url("../../../public/img/activity/touchshow2.jpg") center
+        center/cover no-repeat;
+    }
+    .terry_touchshow2 {
+      width: 100%;
+      height: 400px;
+      // outline: 2px solid white;
+      background: url("../../../public/img/activity/touchshow2.jpg") center
+        center/cover no-repeat;
+    }
+    .name {
+      color: $terry_white;
+      font-family: "Playfair Display";
+      font-size: 44px;
+      font-weight: 600;
+      -webkit-text-stroke: 1px white;
+      color: transparent;
+      margin-top: 3%;
+      text-align: center;
+    }
+  }
+  @include mobile {
+    flex-direction: column;
+    .imgAndNameGrop {
+      width: 100%;
+      margin-top: 5%;
+      .name {
+        font-size: 30px;
+        margin-top: 1%;
+      }
+    }
+  }
+}
+.terry_animalImg_Area {
+  width: 100%;
+  // height: 600px;
+  // outline: 2px solid white;
+  // background: url("../../../public/animals-footer.png") center
+  //   center/cover no-repeat;
+  margin-top: 20%;
+  img {
+    // outline: 1px solid white;
+    width: 100%;
+    height: auto;
+  }
+  @include mobile {
+    margin-top: -10%;
+  }
+}
+
+.terry_carousel_area {
+  margin: 5% auto;
+  width: 80%;
+  height: 500px;
+  // outline: 1px solid white;
+  p {
+    font-size: 40px;
+    -webkit-text-stroke: 1px black;
+    margin-top: 20%;
+    text-align: center;
+  }
+  @include mobile {
+    width: 100%;
+  }
+}

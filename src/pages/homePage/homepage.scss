@@ -1,0 +1,148 @@
+$ning-color1: #eb5c37;
+$ning-color2: #f9b112;
+$ning-color3: #ffffff;
+$ning-color4: #000000;
+$ning-color5: #1b7754;
+$ning-chinesefont: "Noto Sans", sans-serif;
+$ning-englishont: "Playfair Display", serif;
+
+@media screen and (max-width: 700px) {
+  /* 釘選門票 、 刮刮樂遊戲 */
+  .ning_buyticket,
+  .ning_game {
+    display: none;
+  }
+
+  .ning_buyticketicon p,
+  .ning_gameicon p {
+    display: none;
+  }
+
+  .ning_buyticketicon span,
+  .ning_gameicon span {
+    display: none;
+  }
+
+  .ning_rightflex {
+    display: none;
+  }
+
+  .ning_buyticketBox {
+    display: none;
+  }
+
+  /* 輪播牆 */
+
+  .ning_homeslider {
+    position: relative;
+    width: calc(100vw - calc(100vw - 100%));
+    height: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding-top: 60px;
+  }
+
+  .ning_homecarouselimg {
+    height: 100vw;
+    object-fit: cover;
+  }
+
+  .ning_homecarousellefticon {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    font-size: 3rem;
+    color: $ning-color4;
+    z-index: 10;
+    cursor: pointer; //鼠標改變
+    user-select: none;
+  }
+
+  .ning_homecarouselrighticon {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    font-size: 3rem;
+    color: $ning-color4;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  /* 園區資訊box */
+
+.ning_informationbox {
+display: flex;
+}
+
+  .ning_informationbox_mb {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  .ning_information_mb {
+    width: 90vw;
+    height: 150px;
+    background-color: #555;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    top: -40px;
+    overflow: hidden;
+  }
+
+  .ning_Admissionbox_mb,
+  .ning_ticketbox_mb,
+  .ning_weatherbox_mb { 
+    margin-left: -5%;
+    width: 30%;
+    text-align: center;
+  }
+
+  .ning_groupsicon,
+  .ning_cloudicon,
+  .ning_confirmationicon {
+    font-size: 5rem;
+    color: $ning-color3;
+  }
+
+  .ning_Admission,
+  .ning_weather {
+    font-size: 1.5rem;
+    color: $ning-color3;
+    font-family: $ning-chinesefont;
+    margin: 0;
+  }
+
+  .ning_ticket {
+    font-size: 1.5rem;
+    color: $ning-color3;
+    font-family: $ning-chinesefont;
+  }
+
+  .ning_AdmissionNumber,
+  .ning_weatherNumber {
+    font-size: 3rem;
+    color: $ning-color3;
+    font-family: $ning-chinesefont;
+    margin: 0;
+  }
+
+  .ning_ticketprice {
+    font-size: 1.5rem;
+    color: $ning-color3;
+    font-family: $ning-chinesefont;
+  }
+
+  .ning_AdmissionUnit,
+  .ning_weatherUnit {
+    font-size: 1.5rem;
+    color: $ning-color3;
+    font-family: $ning-chinesefont;
+  }
+}

@@ -1,0 +1,761 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
+
+@font-face {
+    font-family: 'Noto Sans TC', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+    unicode-range: U+4E00-9FFF;
+}
+
+@font-face {
+    font-family: 'Playfair Display', serif;
+    src: url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    unicode-range: U+00-024F;
+}
+
+:root {
+    --tysu_color: #f9b112;
+    --tysu_color2: #eb5c37;
+    --tysu_color3: #1b7754;
+    --tysu_color4: #222;
+    --tysu_color5: #c7c7c7;
+    --tysu_fontSize: 1.3rem;
+    --tysu_fontWeight: 600;
+    --tysu_showdow: 0 0 3px #f9b01210;
+    --tysu_inputMargin: 1.8rem 0 0 1.8rem;
+}
+.tysu_logInfo {
+    // outline: 1px solid red;
+    width: 7rem;
+    position: absolute;
+    bottom: -75px;
+    left: -10%;
+    font-size: 1.3rem;
+
+    > ul {
+        margin: 0;
+        border: 0.2px solid var(--tysu_color2);
+
+        > li {
+            color: #fff;
+            // outline: 1px solid red;
+            font-weight: 300;
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: var(--tysu_color2);
+            padding: 2px 0;
+            margin: 1px 1px;
+        }
+        > li:hover {
+            background-color: var(--tysu_color);
+        }
+    }
+}
+
+.tysu_contain {
+    min-height: 100vh;
+    font-size: var(--tysu_fontSize);
+    > .tysu_loginBg {
+        width: 30%;
+        right: -1;
+        position: fixed;
+        right: -0.5rem;
+        bottom: -2rem;
+        opacity: 0.15;
+    }
+    > .tysu_row {
+        max-width: 830px;
+        margin: 0 auto;
+    }
+}
+
+.tysu_h1 {
+    padding: 106px 0;
+    font-size: 3rem;
+    background: linear-gradient(135deg, rgb(9, 32, 27), rgb(27, 119, 84) 70%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 900;
+    text-align: center;
+}
+.tysu_enter_h1 {
+    padding-top: 30px;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-indent: 3px;
+    > .tysu_enter {
+        color: var(--tysu_color2);
+    }
+    > .tysu_enter:hover {
+        color: var(--tysu_color);
+        text-decoration: underline;
+    }
+}
+
+.tysu_memberBg {
+    position: fixed;
+    width: 30rem;
+    bottom: -2.5rem;
+    left: -0.5rem;
+    z-index: -1;
+    opacity: 0.15;
+    // transition: 1s;
+}
+
+#tysu_form table {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+.tysu_tr {
+    border-bottom: 1px solid #e9e9e9;
+}
+.tysu_tr th,
+.tysu_tr td {
+    text-align: right;
+    font-weight: var(--tysu_fontWeight);
+    font-size: var(--tysu_fontSize);
+    vertical-align: middle;
+    position: relative;
+}
+
+.tysu_tr span {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    margin-top: 0;
+}
+
+.tysu_tr label {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.tysu_orderTr {
+    font-weight: var(--tysu_fontWeight);
+    border-bottom: 1px solid #000;
+    div {
+        width: 180px;
+        white-space: pre;
+        margin: 0 auto;
+    }
+}
+
+.tysu_orderTr th,
+.tysu_orderTr td {
+    vertical-align: middle;
+    text-align: center;
+    padding: 0.5rem 0;
+}
+.tysu_orderText th,
+.tysu_orderText td {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: var(--tysu_fontSize);
+    font-weight: 300;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.tysu_input,
+.tysu_select {
+    border: 0.8px solid #000;
+    border-radius: 0;
+    width: calc(100% - 1.8rem);
+    height: 4.16rem;
+    margin: var(--tysu_inputMargin);
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: var(--tysu_fontSize);
+    outline: none;
+    background-color: transparent;
+}
+.recaptcha {
+    margin: 1.8rem 0 0 2.3rem;
+}
+.tysu_input::placeholder {
+    color: var(--tysu_color5);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+.tysu_select,
+.tysu_select:hover,
+.tysu_select:focus,
+.tysu_select:active {
+    transition-delay: 99999s;
+    transition: color 99999s ease-out, background-color 99999s ease-out;
+    -webkit-transition-delay: 99999s;
+    -webkit-transition: color 99999s ease-out, background-color 99999s ease-out;
+    -webkit-text-fill-color: #000;
+}
+
+.tysu_input:focus,
+.tysu_select:focus {
+    outline: 0.8px solid var(--tysu_color);
+    border: 0.8px solid transparent;
+    border-color: var(--tysu_color);
+    box-shadow: 0 0 3px 3px transparent;
+    background-color: transparent;
+}
+
+.tysu_year {
+    width: 14rem;
+    margin-right: 0.5rem;
+}
+
+.tysu_month,
+.tysu_date {
+    width: 7.5rem;
+    margin: 0 0.5rem;
+}
+
+.tysu_see {
+    position: absolute;
+    right: 5%;
+    top: 45%;
+    font-size: var(--tysu_fontSize);
+    color: #777;
+}
+
+#emailHelp,
+#nameHelp,
+#genderHelp,
+#birthHelp,
+#tysu_adressHelp,
+#tysu_passHelp,
+#tysu_cfPassHelp,
+#tysu_codeHelp,
+#tysu_addressHelp,
+#tysu_recaptchaHelp {
+    margin: 0.3rem 0 0.3rem 2rem;
+    height: 1rem;
+    text-align: left;
+    font-size: 0.6rem;
+    line-height: 1rem;
+    color: var(--tysu_color2);
+}
+#tysu_recaptchaHelp {
+    font-size: 1.2rem;
+    margin-left: 2.3rem;
+}
+.tysu_last {
+    border-bottom: 0;
+    margin-bottom: 40px;
+}
+
+.tysu_btn_sign,
+.tysu_editBtn,
+.tysu_cancelBtn,
+.tysu_gradeBtn,
+.tysu_addressBtn,
+.tysu_addBtn,
+.tysu_infoeditBtn {
+    border: 0;
+    background-color: none;
+    outline: none;
+    height: 50px;
+    color: white;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: var(--tysu_fontSize);
+    font-weight: 500;
+    margin: 1.4rem 0 10px 1.8rem;
+}
+
+.tysu_addBtn {
+    width: 830px;
+    background-color: var(--tysu_color);
+    margin: 1.5rem auto 10rem;
+}
+
+.tysu_btn_sign {
+    display: block;
+    width: 320px;
+    background-color: var(--tysu_color);
+}
+.tysu_editBtn,
+.tysu_cancelBtn {
+    width: 150px;
+    background-color: #000;
+}
+.tysu_infoeditBtn {
+    width: 30rem;
+    color: #fff;
+    background-color: #000;
+}
+
+.tysu_gradeBtn {
+    width: 100%;
+    margin: 0;
+    background-color: #09201b;
+}
+
+.tysu_addressBtn {
+    display: inline-block;
+    width: 800px;
+    background-color: var(--tysu_color);
+    margin: 1.4rem auto 0 50%;
+    transform: translateX(-50%);
+}
+
+.tysu_btn_sign a,
+.tysu_signText,
+.tysu_helpText {
+    text-decoration: none;
+    color: #000;
+    font-size: var(--tysu_fontSize);
+    font-weight: var(--tysu_fontWeight);
+    margin-left: 1rem;
+    letter-spacing: 0.02rem;
+    text-indent: 0.02rem;
+}
+.tysu_signText,
+.tysu_helpText {
+    /* font-family: "Noto Sans TC", sans-serif; */
+    font-weight: 800;
+    color: var(--tysu_color3);
+}
+
+.tysu_btn_sign a:visited,
+.tysu_link a:visited {
+    color: #000;
+}
+.tysu_signText:visited,
+.tysu_helpText:visited {
+    color: var(--tysu_color3);
+}
+.tysu_help a,
+.tysu_help i {
+    margin: 0 0.5rem 0 1rem;
+}
+.tysu_help {
+    width: 320px;
+    margin: 0 0 0 1.8rem;
+    text-align: right;
+}
+.tysu_signText:hover,
+.tysu_helpText:hover {
+    color: var(--tysu_color4);
+}
+
+.tysu_titleSpan {
+    display: inline-block;
+    margin-top: 6px;
+}
+.tysu_grade {
+    width: 100%;
+    padding-top: 120px;
+    overflow: hidden;
+    // height: 100vh;
+    margin-right: 0;
+}
+.tysu_gradeImg {
+    height: 226px;
+    max-width: 830px;
+    margin: 0 auto;
+    /* outline: 1px solid red; */
+    overflow: hidden;
+    margin-bottom: 0.9rem;
+    display: flex;
+    justify-content: center;
+}
+
+.tysu_gradeImg img {
+    height: 100%;
+    /* margin: 0 auto; */
+    vertical-align: middle;
+}
+.tysu_gradeLi {
+    width: 160px;
+    height: 110px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    // outline: 1px solid red;
+}
+.tysu_gradetext {
+    font-size: var(--tysu_fontSize);
+    align-self: center;
+}
+.tysu_gradeSmall {
+    height: 100%;
+}
+.tysu_memberList {
+    margin-bottom: 3.8rem;
+}
+.tysu_memberList li {
+    width: 195px;
+    height: 100px;
+    font-size: var(--tysu_fontSize);
+    font-weight: var(--tysu_fontWeight);
+    border: 0.8px solid #000;
+    text-align: center;
+    line-height: 100px;
+    margin: 0 7px;
+}
+
+/* -----li hover 文字顏色會被改變----- */
+.tysu_memberList li:hover {
+    color: var(--tysu_color2);
+    border: 0.8px solid var(--tysu_color2);
+    box-shadow: var(--tysu_showdow);
+    > .tysu_link {
+        color: var(--tysu_color2);
+    }
+}
+.tysu_memberList li.active {
+    color: var(--tysu_color2);
+    border: 0.8px solid var(--tysu_color2);
+    box-shadow: var(--tysu_showdow);
+    > .tysu_link {
+        color: var(--tysu_color2);
+    }
+}
+.tysu_link.disabled {
+    visibility: hidden;
+}
+/* ---------------------------------- */
+
+.tysu_memberList,
+.tysu_memberChild,
+.tysu_focusUnderLine,
+.tysu_btnCenter {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+.tysu_memberChild li,
+.tysu_focusUnderLine li {
+    width: 9.35rem;
+    /* font-size: var(--tysu_fontSize); */
+}
+.tysu_memberChild li {
+    /* outline: 1px solid red; */
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: var(--tysu_fontWeight);
+    margin: 8px;
+    list-style: none;
+}
+
+.tysu_focusUnderLine li {
+    height: 0.6rem;
+    background-color: #000;
+    margin: 0 8px 3.8rem;
+}
+
+.tysu_hr {
+    width: 830px;
+    border: 0;
+    background-color: black;
+    height: 1px;
+    margin: 4px auto 0;
+}
+/* 子項目底線 */
+
+.tysu_listHr {
+    width: 75%;
+    max-width: 830px;
+    margin-bottom: 4px;
+}
+
+.tysu_bg {
+    position: absolute;
+    max-width: 330px;
+    right: calc(50% - 410px);
+    opacity: 0.4;
+    z-index: -1;
+    color: var(--tysu_color);
+}
+
+.tysu_expireDate,
+.tysu_codeContent {
+    display: flex;
+    justify-items: start;
+}
+.tysu_expireDateList {
+    display: flex;
+    justify-self: start;
+    margin: 0 0 0 0;
+}
+#tysu_expireDate,
+.tysu_code,
+.tysu_creditYear {
+    margin: 1.8rem 0.5rem 1.8rem 1.8rem;
+}
+.tysu_code {
+    width: 100px;
+}
+.tysu_creditYear {
+    margin-left: 0.5rem;
+}
+.tysu_creditGroup {
+    display: flex;
+    width: 700px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem 0;
+
+    > .tysu_cardcontent {
+        position: relative;
+
+        > .tysu_creditNum {
+            position: absolute;
+            left: 15%;
+            bottom: 0;
+            transform: translate(-15%, -25%);
+            color: #fff;
+            font-size: var(--tysu_fontSize);
+            display: flex;
+            align-items: center;
+            //   outline: 1px solid red;
+
+            > div .tysu_creditCard {
+                width: 70px;
+                height: 50px;
+                margin: 0;
+                font-size: var(--tysu_fontSize);
+                border: 0;
+                // border: 0.8px solid #fff6;
+                font-size: var(--tysu_fontSize);
+                color: #fff;
+                outline: none;
+                background-color: transparent;
+            }
+        }
+    }
+}
+.tysu_tr {
+    > .tysu_expireDateList {
+        > .row {
+            > .tysu_creditLabel {
+                color: #1b7754;
+                vertical-align: middle;
+            }
+        }
+    }
+}
+
+.tysu_creditT {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: var(--tysu_fontWeight);
+    color: var(--tysu_color2);
+    padding: 3.5rem 0;
+}
+
+.tysu_creditInput {
+    min-width: 450px;
+}
+.tysu_creditcardW {
+    width: 100%;
+}
+.tysu_creditImg {
+    width: 25rem;
+    // height: 20.31rem;
+    /* display: flex; */
+    margin: 0 auto;
+    // outline: 1px solid red;
+}
+
+.tysu_Bank {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 30%;
+    font-size: 2rem;
+    font-weight: var(--tysu_fontWeight);
+}
+.tysu_creditDelete,
+.tysu_creditEdit,
+.tysu_addressDelete,
+.tysu_addressEdit {
+    font-size: var(--tysu_fontSize);
+    width: 32px;
+    text-align: center;
+}
+
+.tysu_list {
+    display: flex;
+}
+
+.tysu_link {
+    color: #000;
+    text-decoration: none;
+    font-size: var(--tysu_fontSize);
+}
+
+.tysu_table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tysu_btnGroup {
+    display: flex;
+    justify-content: center;
+}
+
+.tysu_select {
+    height: 50px;
+    width: 236px;
+    font-size: 1rem;
+    margin: 0;
+    margin-bottom: 1.8rem;
+}
+
+.tysu_filterSelect {
+    display: flex;
+    width: 830px;
+    margin: 0 auto;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.tysu_btnPages {
+    justify-content: center;
+}
+
+.tysu_pageGroup {
+    display: flex;
+    margin-top: 1.8rem;
+}
+
+.tysu_pageItem,
+.tysu_pageInput {
+    width: 50px;
+    height: 50px;
+    font-size: var(--tysu_fontSize);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: 1.8rem; */
+}
+.tysu_pageItem,
+.tysu_pageItem a {
+    color: #fff;
+    background-color: #000;
+}
+
+.tysu_pageText {
+    margin: 0 1rem;
+}
+.tysu_allPage {
+    padding-left: 1rem;
+    font-size: 1rem;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.tysu_orderBg {
+    background-color: #f5f5f5;
+}
+
+.tysu_likeBtn {
+    border: 0;
+    background-color: none;
+    outline: none;
+    height: 50px;
+    width: 100%;
+    color: white;
+    font-size: 1rem;
+    font-weight: var(--tysu_fontWeight);
+}
+
+.tysu_likeGroup {
+    display: flex;
+    flex-wrap: wrap;
+}
+.tysu_likeCart {
+    background-color: var(--tysu_color);
+    margin-bottom: 0.5rem;
+}
+.tysu_likeCancel {
+    background-color: #d2d2d2;
+    margin-top: 0.5rem;
+}
+
+.tysu_birthGroup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tysu_memberBtnGroup {
+    padding-bottom: 7rem;
+}
+
+.tysu_modal {
+    font-size: var(--tysu_fontSize);
+    text-align: center;
+}
+.tysu_input.tysu_birth {
+    width: 2rem;
+    margin-right: 1px;
+}
+.tysu_tr {
+    .tysu_birthText {
+        font-family: 'Noto Sans TC', sans-serif;
+        font-size: var(--tysu_fontSize);
+        font-weight: 500;
+        margin: 0 0 0 1rem;
+    }
+}
+.tysu_modalTitle {
+    color: var(--tysu_color2);
+    font-weight: var(--tysu_fontWeight);
+}
+.tysu_modalBtn {
+    border: 0;
+    background-color: transparent;
+    color: #000;
+    font-size: 1.35rem;
+}
+.tysu_editModal {
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+.tysu_editModalFooter {
+    display: flex;
+    justify-content: space-around;
+    > .tysu_editModalBtn {
+        background-color: #f9b112;
+        width: 10rem;
+        border: 0;
+        border-radius: 0;
+        outline: none;
+        height: 50px;
+        color: white;
+        font-family: 'Noto Sans TC', sans-serif;
+        font-size: var(--tysu_fontSize);
+        font-weight: 500;
+        margin: 1.4rem 0 10px 1.8rem;
+    }
+    > .tysu_storeModalBtn {
+        margin: 0 0;
+    }
+}
+.tysu_editModalBtn:hover {
+    background-color: var(--tysu_color2);
+}
+
+.tysu_input.city,
+.tysu_input.area {
+    width: 105px;
+}
+.tysu_input.store {
+    width: 400px;
+}
+.tysu_address_input {
+    width: 30rem;
+    background-color: #eee;
+}
+.tysu_likeImg {
+    width: 110px;
+    max-height: 110px;
+    object-fit: contain;
+}
+.tysu_orderTr.tysu_orderText th {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}

@@ -1,0 +1,158 @@
+.spot_container {
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: rgb(249,177,18);
+    margin-bottom: -380px;
+}
+.game_title{
+    padding-top: 2rem;
+    width: 100%;
+    font-size: 4rem;
+    color: black;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 50px;
+    font-family: sans-serif;
+}
+.game_profile{
+    margin-top: 2rem;
+    text-align: center; 
+    color: black;
+    line-height: 27px;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+}
+.game_profile span{
+    color: red;
+    
+    font-weight: 800;
+}
+.leaf_left{
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    top: 20px;
+    left: 0;
+}
+.cloud_left{
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    top: 205px;
+    left: 490px;
+}
+.cloud_left1{
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    top: 270px;
+    left: 250px;
+}
+.cloud_right{
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    top: 175px;
+    right: 350px;
+}
+.cloud_right1{
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    top: 265px;
+    right: 95px;
+}
+.leaf_left img{
+    width: 100%;
+    height: auto;
+}
+.leaf_right{
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    top: 20px;
+    right: 0;
+}
+.leaf_right img{
+    width: 100%;
+    height: auto;
+}
+.container_level {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    width: calc(100% - 300px);
+    height: 300px;
+    margin: 40px auto;
+    background-color: rgb(49, 40, 8);
+    border-radius: 30px;
+}
+.choose_levelTitle{
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: white;
+    width: 100%;
+    text-align: center;
+    margin-top: -5rem;
+    margin-bottom: 2rem;
+}
+.level_hexagon{
+    position:relative;
+    width:100px;
+    height:0;
+    border-width:0 25px 43px;
+    border-style:solid;
+    border-color:transparent transparent #eb5c37;
+}
+.level_hexagon:before{
+    position:absolute;
+    content:"";
+    top:43px;
+    left:-25px;
+    width:100px;
+    height:0;
+    background:none;
+    border-width:43px 25px 0;
+    border-style:solid;    
+    border-color:#eb5c37 transparent transparent;
+    }
+.level_circle{
+    font-family: sans-serif;
+    font-weight: 600;
+    text-align: center;
+    font-size: 2rem;
+    line-height: 70px;
+    position: absolute;
+    left: -10px;
+    top: 8px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: rgb(233, 226, 131);
+    color: rgb(49, 40, 8);
+    cursor: pointer;
+}
+.wrap_level{
+    width: 600px;
+    display: flex;
+    justify-content: space-around;
+}
+.animals-footer{
+    width: 100%; 
+}
+.animals-footer img{
+    width: 100%;
+    height: auto;
+    border: none;  
+}
+@media (min-width:701px) and (max-width:1400px) {
+    .spot_container{
+        margin-bottom: -280px;
+    }
+    .animals-footer{
+        margin-top: 150px;
+    }
+}
